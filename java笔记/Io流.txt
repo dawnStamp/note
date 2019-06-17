@@ -1,5 +1,5 @@
-﻿输出流：FileWriter
-输入流：FileReader
+﻿输出流：FileWriter		写
+输入流：FileReader		读
 
 往文件中写数据
   写数据--输出流--FileWriter
@@ -18,3 +18,7 @@
 close()和flush()方法的区别：
        flush():刷新缓冲区，流对象还可使用
        close():先刷新缓冲区人,然后通知系统释放资源。流对象不可被使用
+
+ BufferedWriter: 将文本写入字符输出流，缓冲各个字符，从而提供单个字符、数组和字符串的高效写入
+ BufferedReader: 从字符输入流中读取文本，缓冲各个字符，从而提供单个字符、数组和字符串的高效读取
+
