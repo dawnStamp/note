@@ -1,0 +1,18 @@
+修饰符
+			类			成员变量			成员方法			构造方法
+
+public		 √			  	√				    √                   √
+default		 √				√					√					√
+protected	 ×				√					√					√
+private		 ×				√					√					√
+abstract     √				√  					√					×
+static		 ×				√					√					×
+final		 √				√					√					×
+
+
+常见规则：
+			以后我们使用public来修饰类，一个java文件中只能有一个类，如果一个文件有多个类，类名和文件名一样的类名，必须用public修饰，其他的类不能使用public修饰
+			以后所有的成员变量都使用private修饰
+			以后所有的方法使用public修饰
+			以后所有的构造方法使用public修饰
+						如果你不想创建对象，使用private修饰
