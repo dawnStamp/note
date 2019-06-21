@@ -1,0 +1,118 @@
+GIT
+
+
+GIT官网:https://git-scm.com
+
+*这里面写的file都是你要用git处理的文件名称
+   *这里面用<>标注的是用来提示用什么
+
+
+git命令: 
+git init   创建本地仓库
+git add  文件添加到仓库
+git commit -m   文件提交注释
+git status  查看仓库状态
+git log 显示提交日志
+git reset --hard HEAD^         回退到上个版本
+git reflog  记录你的每次命令
+
+git diff HEAD -- <file>       查看工作区和版本库和最新版本的区别
+
+git check out -- <file>      在工作区的修改全部撤销。
+
+git reset HEAD <file> 把暂存区的修改撤销掉，重新放回工作区
+
+git rm <file>  从git版本库删除该文件
+
+ssh-keygen -t rsa -C " youremail@example.com"
+创建SSH Key
+
+git remote add origin 从github上复制的仓库地址
+本地git仓库关联远程仓库
+
+git push -u origin master   把本地库所有内容推送到远程库中
+
+git push origin master 把本地master分支的最新修改推送到github
+
+git checkout -b <分支名称>   创建一个新分支，然后切换到新分支
+等同于下面两段
+git branch <分支名称>       创建分支
+
+git checkout <分支名称>    切换到新分支
+
+git branch   查看所有分支，在当前分支前会标一个*
+
+git merge <分支名称>     合并指定分支到当前分支
+
+git branch -d <分支名称>  删除分支
+
+git branch -D <分支名称>  大写的D可以强行删除分支
+
+
+git log --graph   看分支合并情况，会显示线状退（当使用了之后，可以有Q键退出查看）
+
+git merge --no-ff -m <分支名称>    (-m是commit描述，可以不加)  普通模式合并分支，合并后历史有分支
+
+git stash   把当前工作区工作储存起来，后面可以继续工作(用于修复bug分支)
+
+git stash list    查看stash命令把工作文件存到哪个地方
+
+git stash apply  恢复stash储存的代码 但恢复了stash内容不会清除，需要用git stash drop   删除
+
+还有一种恢复就是 git stash pop  恢复的同时也把stash内容删了
+
+git remote    查看远程库信息 
+
+git remote -v   查看远程库更详细信息 （一般显示两串一样的网页链接，不过后缀不一样。一个fetch是可以下载/克隆，一个push是可以上传/推送）
+
+git push origin <分支名称>         把该分支推送到远程库
+
+git checkout -b <分支名称> origin/<分支名称>   创建本地分支
+与远程库分支名称一样
+
+git pull   把远程库里分支更新的抓下来，
+
+git pull origin master  把远程库更新的代码抓取到本地库
+
+git pull --rebase origin master  远程库和本地库代码合并
+
+git branch --set-upstream-to=<远程库>/<分支名称> <分支名称>         设置本地分支与远程分支的链接
+
+git rebase   操作可以把本地未push的分叉提交历史整理成直线 ,rebase的目的是使得我们在查看历史提交的变化时更容易，因为分叉的提交需要三方对比
+
+git tag  查看所有标签
+git tag <name>     创建一个新标签
+
+git log --pretty=oneline --abbrev-commit  把提交commit记录显示
+
+git show <标签名称>    查看标签信息
+
+git tag -a <标签名称> -m "自定义标签说明" < commit号>        -a指定标签名   -m指定说明文字       
+创建带有说明的标签
+
+git tag -d <标签名称>      删除标签
+
+git push origin --tags    一次性推送全部尚未推送到远程库的本地标签
+
+git push origin :refs/tags/<标签名称>     从远程库删除标签
+
+git config --global alias.<命令简写> <需要简写的命令>    把命令代码简写
+
+
+
+
+
+
+
+
+
+
+
+
+
+通用
+ 是在cmd窗口也能使用的命令
+rm file      删除文件
+
+
+
