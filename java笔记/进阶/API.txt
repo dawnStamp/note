@@ -1,0 +1,9 @@
+String toString() : 返回该对象的字符串表示(由于返回的这个地址值我们不好使用，所以我们一般都会重写toString方法)
+           return getClass().getName() + "@" + Integer.toHexString(hashCode());
+   getClass()：返回一个字节码对象
+   getName()：获取类名
+   Integer.toHexString：返回指定参数的十六进制字符串形式
+   hashCode()：返回该对象的哈希码值（内存地址）
+ 
+  boolean equals(Object obj)
+       使用 == 来比较两个对象是否相等，引用类型比较地址值是否相等
