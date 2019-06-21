@@ -1,0 +1,41 @@
+==（eq）
+!=（ne）
+>（gt）
+>=（ge）
+<（lt）
+<=（le）
+注意：
+在el表达式中，要参与运算的两个变量，一定写在一个{}中
+比如 ${4>3}  不能写成${4} > ${3}
+
+${user}:
+从四个作用域中去寻找Attribute的名称为"user"的属性
+从小到大来搜索，如果找到，就不往大的方向再找，直接返回
+如果都没找到，直接返回""
+
+// 从实体对象中取值
+直接使用“.”或“[]”来取值，“.”后面或“[]”的里面写对象的属性名
+// 从List中取值，直接写List的下标
+// map取值，直接通过map的key来取，如果出现不规范的key值
+要使用“[]”来取值
+// map
+   Map<String,Object> map = new HashMap<String,Object>();
+   map.put("pwd","123456");
+   map.put("uname","nihao");
+   map.put("111","123");
+   request.setAttribute("map",map);
+
+   Map取值：<br>
+${map["111"]}
+
+
+pageContext
+通过pageConext获取ServletContext、Request、Response、Session等对象
+格式  ${pageContext.request.requestURL}
+获取request中用户请求的值  ${param.name}
+获取请求头信息  ${header['Context-Type']}
+获取cookie值  ${cookie.cookeName.value}
+获取context-param  ${initParam.name}
+获取隐式作用域对象中保存的属性
+${user.name}  按照pageScope、requestScope、sessionScope、applicationScope的顺序查找
+${pageScope.user.name}  只在pageContext中查找
