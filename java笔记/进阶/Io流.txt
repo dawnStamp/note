@@ -1,0 +1,49 @@
+﻿输出流：FileWriter		写
+输入流：FileReader		读
+
+往文件中写数据
+  写数据--输出流--FileWriter
+ 
+  FileWriter:
+           FileWriter(String fileName):传递一个文件名称
+ 
+  输出流写数据的步骤：
+       A:创建输出流对象
+       B:调用输出流对象的写数据的方法
+       C:释放资源
+
+从文件中读数据并显示到控制台
+       读数据--输出流--FileReader
+ 
+  FileReader:
+       FileReader(String fileName):传递文件名称
+ 
+   输入流读文件的步骤：
+           A:创建输入流对象
+           B:调用输入流对象的读数据方法
+           C:释放资源
+
+
+
+相对路径：相对于当前项目而言的，在项目的根目录下（a.txt）
+绝对路径：以盘符开始的路径（d:\\a.txt）
+
+close()和flush()方法的区别：
+       flush():刷新缓冲区，流对象还可使用
+       close():先刷新缓冲区人,然后通知系统释放资源。流对象不可被使用
+
+void write(String str):写一个字符串数据
+void write(String str,int index,int len):写一个字符串中的一部分数据
+void write(int ch):写一个字符数据，这里写int类型的好处是既可以写char类型的数据，也可以写char对应的int类型的值。'a' ,97
+void write(char[] chs):写一个字符数组数据
+void write(char[] chs,int index,int len):写一个字符数组的一部分数据
+
+
+ BufferedWriter: 将文本写入字符输出流，缓冲各个字符，从而提供单个字符、数组和字符串的高效写入
+ BufferedReader: 从字符输入流中读取文本，缓冲各个字符，从而提供单个字符、数组和字符串的高效读取
+
+缓冲流的特殊功能：
+  BufferedWriter
+           void newLine():写一个换行符，这个换行符由系统决定
+  BufferedReader
+           String readLine():一次读取一行数据，但是不读取换行符
