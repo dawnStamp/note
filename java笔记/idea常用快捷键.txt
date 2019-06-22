@@ -128,3 +128,4 @@ F6，移动
 F5，复制 
 Alt+Delete，安全删除 
 Ctrl+Alt+N，内联 
+Ctrl+Alt+M  选择指定代码封装成方法
