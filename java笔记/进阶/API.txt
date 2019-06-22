@@ -7,3 +7,55 @@ String toString() : 返回该对象的字符串表示(由于返回的这个地�
  
   boolean equals(Object obj)
        使用 == 来比较两个对象是否相等，引用类型比较地址值是否相等
+	   
+	  
+System:包含几个有用的类字段和方法。 它不能被实例化。
+ 
+       static void arraycopy(Object src, int srcPos, Object dest, int destPos, int length)
+       将指定源数组中的数组从指定位置复制到目标数组的指定位置。
+			参数1：源数组
+			参数2：源数组起始的索引位置
+			参数3：目标数组
+			参数4：目标数组的起始索引位置
+			参数5：指定接收元素个数
+       static long currentTimeMillis()
+       返回当前时间（以毫秒为单位）。
+                      这个毫秒的时间是相对时间，相对于1970-1-1 00：00:00
+                      1970-1-1 00：00:01   ：1000
+                      1970-1-1 00：01:00   ：1000 * 60
+                      1970-1-1 01：00:00   ：1000 * 60 * 60
+                       1000毫秒=1秒
+       static void exit(int status)
+       终止当前运行的Java虚拟机。
+       static void gc()
+       运行垃圾回收器。
+	   
+	   
+Date:表示特定的瞬间，精确到毫秒，可以通过方法来设定自己所表示的时间，可以表示任意的时间
+  static long currentTimeMillis():返回当前系统时间（以毫秒为单位 ，从1970-1-1至今的毫秒数）。
+ 
+  构造方法：
+       Date()：创建的是一个表示当前系统时间的Date对象
+       Date(long date) ：使用给定的毫秒时间值构造一个 Date对象。
+	   
+	Date的常用方法
+       毫秒值 -- Date
+            设置
+            返回值是void,参数long
+            void setTime(long time)
+            Date(long date)
+       Date -- 毫秒值
+           获取
+           返回值是long,无参数
+           long getTime()
+		   
+		   
+SimpleDateFormat:
+       格式化：
+               Date --- String
+               2049-8-26   2049年8月26日
+               String format(Date date)
+               将日期格式化成日期/时间字符串。
+       解析：
+               String --- Date
+		   
