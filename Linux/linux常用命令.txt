@@ -1,0 +1,33 @@
+		linux常用命令
+			
+	在linux 虚拟机上打开Terminal控制台
+
+pwd：打印当前目录
+cd /: 切换到根目录
+ll:查看当前目录下的内容
+        	
+list：列出
+ll   ：列出当前目录下的文件信息
+ls -al  ：列出当前目录下的文件信息（包括隐藏文件，特殊目录）
+ll /bin/  :列出根目录下的文件信息
+
+cd  :切换目录命令
+cd ~ :当前用户目录 
+cd /  :根目录
+cd -   :上一次访问的目录
+cd ..  :上一级目录
+cd     :缺省当前用户目录
+
+touch  1.txt   在当前目录创建一个文件 1.txt
+
+clear   :清除屏幕
+
+mkdir  :创建目录
+mkdir  a   :当前目录下创建文件夹a
+mkdir  /root/b  :在根目录的root下创建目录b
+mkdir  -pv  /root/c/e/d  :在根目录下的root下创建目录结构 c/e/d
+
+
+
+
+
