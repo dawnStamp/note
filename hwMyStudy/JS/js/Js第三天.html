@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="{CHARSET}">
+		<title></title>
+		<script type="text/javascript">
+			//for循环
+			/*for(
+				var i = 1;//起始量
+				i <= 100;//设定程序的计算条件
+				i++//设置步数
+			){
+				console.log(i);
+			}
+
+			for(var i = 1;i<13;i = i+4){
+				console.log(i);
+			}
+			
+			for(var i = 50;i<40;i++){
+				console.log(i);//不会输出
+			}
+			
+			for(var i = 1;i<10;i=i+3){
+				i=i+1
+				console.log(i);
+			}
+			
+			for(var i =1;i<1000;i++){
+				if(i%5==0&&i%6==0){
+					console.log(i)
+				}
+			}
+			
+			for(var i = 1;i<100;i++){
+				if(i%7!=0&&i%10!=7){
+					console.log(i)
+				}
+			}*/
+			//水仙花
+			/*for(var i =2;i<1000;i++){
+				var a = parseInt(i/100);
+				var b = parseInt((i-100*a)/10);
+				var c = parseInt((i-b*10-a*100));
+				if(i==Math.pow(c,3)+Math.pow(b,3)+Math.pow(a,3)){
+					console.log(i)
+				}
+			}*/
+			
+			/*var i = 0;
+			while(i<10){
+				console.log(i);
+				i++
+			}*/
+			
+			//while循环
+			/*var i = 1;
+			while(i<100){
+				if(i%7!=0&&i%10!=7){
+					console.log(i);		
+				}i++;
+			}*/
+		    //do while循环
+			/*var i = 0;
+			do{
+				console.log(i);
+				i++;
+			}while(i<10)*/
+			
+			/*var i = 1;
+			do{
+				if(i%7 !=0 && i%10 != 7){
+				console.log(i);
+			}i++;
+		    }while(i<100)*/
+		   
+		   //break间断
+		   /*for(var i = 0;i<10;i++){
+		   	if(i==5){
+		   		break;
+		   	}
+		   	console.log(i);
+		    }*/
+		   
+		   //continue语句
+		   /*for(var i = 0;i<10;i++){
+		   	if(i==5){
+		   		continue;
+		   	}
+		   	console.log(i);
+		    }*/
+		   
+		   //switch语句
+		   /*var day = new Date().getDay();
+		   switch(day)
+		   {
+		   	    case 0:
+		   	    console.log("星期天");
+		   	    break;
+		   	    case 1:
+		   	    console.log("星期一");
+		   	    break;
+		   	    case 2:
+		   	    console.log("星期二");
+		   	    break;
+		   	    case 3:
+		   	    console.log("星期三");
+		   	    break;
+		   	    case 4:
+		   	    console.log("星期四");
+		   	    break;
+		   	    case 5:
+		   	    console.log("星期五");
+		   	    break;
+		   	    case 6:
+		   	    console.log("星期六");
+		   	    break;
+		   	    default:
+		   	    console.log("其他"); 
+		   }
+
+		  var day = new Date().getDay();
+		  switch(day){
+		  	case 0:
+		   	    console.log("星期天");
+		   	    break;
+		   	case 6:
+		   	    console.log("星期六");
+		   	    break;
+		   	default:
+		   	    console.log("当前是工作日");
+		  }*/
+		 
+		 //数组
+		 /*var myname = new Array();//第一种写法：不固定长度
+		 myname[1] = "小刘";
+		 myname[2] = "小冯";
+		 myname[3] = "小王";
+		 
+		 console.log(myname[1]);*/
+		 
+		 /*var myname = new Array(2);//第二种写法：固定长度(js中数组的长度会根据值的变化而变化，Array中（里面的初始化值），实在程序初始化时，在内存当中划分的内存区域)  
+		 myname[1] = "小刘";
+		 myname[2] = "小冯";
+		 myname[3] = "小王";
+		 
+		 console.log(myname[2]);*/
+		 
+		 /*var myname = new Array("小刘","小冯","小王");//第三种写法，在定义时，就赋值操作
+		 console.log(myname[0]);*/
+		
+		/*var myname = new Array();
+		myname[0] = 1;
+		myname[1] = "鸡肉";
+		myname[2] = 1.1;
+		myname[3] = true;
+		//遍历
+		for(var i = 0; i<myname.length;i++){
+			console.log(myname.length);			
+		}*/
+		
+		//concat使用 数组合并(三种拼接方法)
+		/*var arr = new Array();
+		arr[0] = "是个";
+		arr[1] = "光头";
+		
+		console.log(arr.concat(" 他","刘伟建"));
+		
+		var arr1 = new Array();
+		arr1[0] = "rose";
+		arr1[1] = "刘伟建";
+		
+		console.log(arr.concat(arr1));
+		
+		var arr2 = new Array();
+		arr2[0] = "张三";
+		arr2[1] = "李四";
+		
+		console.log(arr.concat(arr1,arr2));*/
+		
+		//join分割
+		/*var arr = new Array();
+		arr[0] = "张三";
+		arr[1] = "李四";
+		
+		console.log(arr.join("."));*/
+		
+		/*函数的定义
+		 * 
+		 * 关键字 function开头
+		 * 函数名
+		 * ()传递的参数
+		 * 
+		 * {}方法体
+		 */
+		/*function f1(name,job){
+			var arr = new Array();
+		    arr[0] = name;
+			arr[1] = job;
+		
+			console.log(arr.join("."))
+		}
+		f1("张三","程序员");*/
+		
+		//函数的运用方法
+		/*function f2(a,b){
+			return a+b;
+		}
+		
+		console.log(f2(10,10));*/
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

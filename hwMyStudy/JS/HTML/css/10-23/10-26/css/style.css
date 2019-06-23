@@ -1,0 +1,189 @@
+/*初始化*/
+body,ul,li{
+	margin: 0px;
+	padding: 0px;
+}
+a{
+	text-decoration: none;
+}
+li{
+	list-style: none;
+}
+
+
+.headerbox{
+	background: #191d3a;
+}
+.header{
+	width: 990px;
+	margin: 0px auto;
+}
+.logo{
+	float: left;
+	margin-right:50px;
+	padding-top: 10px;
+}
+.nav{
+	float: left;
+}
+.btn{
+	float: left;
+}
+.language{
+	float: right;
+}
+.clearfix{
+	clear: both;
+}
+.nav li{
+	
+	float: left;
+	width: 88px;
+	height: 58px;
+	border: 1px solid #252947;
+	text-align: center;
+	line-height: 58px;
+	font-size: 14px;
+}
+.nav li a{
+	color: #56778a;
+}
+.nav li:hover{
+	background: #252947;
+}
+.nav li:hover a{
+	color: #e2e4ed;
+}
+.btn{
+	width: 100px;
+	height: 34px;
+	background: #38b774;
+	margin-top: 12px;
+	margin-left: 10px;
+	border-radius: 2px;
+	text-align: center;
+	line-height: 34px;
+	font-size: 14px;
+}
+.btn a{
+	color: #dfffe9;
+}
+.language a{
+	font-size: 12px;
+	color: #444866;
+	line-height: 58px;
+}
+.language a:hover{
+	color: #38b774;
+}
+
+
+.banner a{
+	display: block;
+	height: 460px;
+	background-image:url(../img/banner.jpg) ;
+	background-repeat: no-repeat;
+	background-position:center top;
+}
+
+
+.products{
+	width: 1000px;
+	margin: 50px auto 44px;
+}
+.products_item{
+	float: left;
+	margin-right: 44px;
+	width: 217px;
+}
+.products_title{
+	font-size: 14px;
+	text-align: center;
+	margin-top: 8px;
+	margin-bottom: 18px;
+	
+}
+.products_title a{
+	color: #444866;
+}
+.bofang{
+	float: left;
+	font-size:12px ;
+	margin-left: 80px;
+	margin-right: 8px;
+	margin-top: 8px;
+}
+.bofang a{
+	color: #38b79f;
+}
+.icon{
+	float: left;
+}
+
+
+.fenge{
+	width: 1000px;
+	margin: 0 auto;
+}
+.line{
+	float: left;
+	width: 466px;
+	height: 1px;
+	background: #dbe1e7;
+}
+.dian{
+	width: 36px;
+	margin-left: 16px;
+	margin-right: 16px;
+	float: left;
+}
+.dian div{
+	width: 10px;
+	height: 10px;
+	background: #b5c0cb;
+	margin-left: 14px;
+	float: left;
+	border-radius:50% ;
+}
+
+
+
+.news1{
+	width: 1000px;
+	margin:0 auto;
+	margin-top: 55px;
+}
+.leftbox{
+	float: left;
+}
+.rightbox{
+	float: right;
+}
+.news_item1{
+	border-top:1px solid #e0e1e5;
+	width: 500px;
+
+}
+.news_item1 li{
+	height: 50px;
+	margin-left: 23px;
+	border-bottom: 1px solid #dbe1e7;
+	width: 460px;
+}
+.title{
+	float: left;
+	line-height: 50px;
+}
+.title a{
+	color: #444866;
+}
+.time{
+	float: right;
+	line-height: 50px;
+}
+.time a{
+	color: #afbecf;
+}
+.news_item1 li:hover  .title a{
+	color: #2fbc7e;
+}

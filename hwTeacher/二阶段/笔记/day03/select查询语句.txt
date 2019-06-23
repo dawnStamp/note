@@ -1,0 +1,64 @@
+
+select语句
+
+	语法：
+		select 列名1，列名2... from 表名;
+		
+	可以使用通配符*号来代替   列名1，列名2...  意思为查询表中的所有列，即查询整表
+	
+	比较运算符：
+		(1)in
+			限定值的范围
+			语法：
+				select * from 表名 where 列名 in(值1,值2...);】
+				
+			相当于：
+				select * from 表名 where 列名 = 值1 or 列名 = 值2 ...;
+				
+		(2)like
+			模糊查询
+			语法：
+				select * from 表名 where 列名 like 条件;
+				条件中，使用%来进行关键字搜索
+		
+		(3)between...and...
+			范围查询
+			语法：
+				select * from 表名 where 列名 between 值1 and 值2;
+			
+			取符合两个值之间的数据，包含起始值和结束值
+			用在varchar2列中，会将以值1到值2开头的所有数据查询出来，
+			适用于number类型的列，能准确的取到区间内的数据。
+			
+	逻辑运算符：
+		or
+			或者，满足一个条件即执行
+		and
+			并且，满足所有条件即执行
+			
+	distinct
+		用于返回不重复的内容
+		select distinct 列名 from 表名;
+
+	字符串之间的连接：
+		|| 连接符
+		例如：
+			'你' || '好'
+			结果为：
+				'你好'
+		
+	order by
+		用于排序
+		语法：
+			order by 列名 排序规则;
+			
+		1.默认为asc顺序排序，desc为倒序排序
+		2.order by永远放在sql语句的最后面
+		3.by后面可以接多列，多列时，先根据第一列进行排序，相同的情况下，根据第二列进行排序
+		4.by后面可以接序号，2即为按照第二列进行排序
+		5.列1 asc,列2 desc
+			根据列1进行顺序排序，列1相同时，根据列2进行倒序排序
+		
+oracle中数据使用中文：	
+名：NLS_LANG
+值：SIMPLIFIED CHINESE_CHINA.ZHS16GBK

@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+<head>
+<script type="text/javascript">
+function changePage()
+	{
+		window.location.href="html基础.html";
+	}
+</script>
+<meta charset="utf-8">
+<title>form表单</title>
+</head>
+
+<body>
+注册信息：<br>
+<form action="">
+	用户名：<input type="text" name="username" size="10" /><br>
+	用户名：<input type="text" name="username1" value="zhangsan" readonly="readOnly"/><br>
+	禁用：<input type="text" disabled="true" value="禁用" /><br>
+	密码：<input type="password" name="pwd" maxlength="5" /><br>
+	性别：<input type="radio" name="sex" value="nan" id="sexNan"  /> <label for="sexNan" >男</label> <input type="radio" name="sex" value="nv" checked />女<br>
+	爱好：<input type="checkbox" value="game" checked />游戏  <input type="checkbox" value="code" />代码 <input type="checkbox" value="sport" />运动 <br>
+	毕业学校：<select name="school">
+	    <option value="blank">请选择毕业学校</option>
+		<option value="beijing">北京大学</option>
+		<option value="清华大学">清华大学</option>
+		<option value="nanchang">南昌大学</option>
+	</select><br>
+	出生日期：<input type="date" name="birthday" /><br>
+	出生城市：<select>
+		<optgroup label="一线城市">
+			<option>北京</option>
+			<option>上海</option>
+			<option>广州</option>
+		</optgroup>
+		<optgroup label="二线城市">
+			<option>武汉</option>
+			<option>杭州</option>
+			<option>苏州</option>
+		</optgroup>
+		<optgroup label="三线城市">
+			<option selected>南昌</option>
+			<option>九江</option>
+			<option>徐州</option>
+		</optgroup>
+	</select><br>
+	自我介绍：<textarea name="desc" cols="10" rows="5" ></textarea><br>
+	<input type="submit" value="保存，提交表单" />
+	<input type="button" value="按钮，不提交表单" onClick="alert('点击了按钮')" /><br>
+	<input type="button" value="点击按钮，跳转页面" onClick="changePage()" /><br>
+	<button>button</button>
+</form>
+</body>
+</html>

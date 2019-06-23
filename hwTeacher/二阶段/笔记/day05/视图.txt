@@ -1,0 +1,27 @@
+
+视图
+	视图实际上是一张或多张表上的预定义查询，这些表称为基表。
+	
+	语法：
+		create or replace force/noforce VIEW 视图名
+		AS
+		select查询
+		with read only
+		
+	-----------------------------------------------------------------------------------------------	
+		create				创建
+		or replace 			如果视图存在，则替换
+		force/noforce
+			force
+				基表不存在也可以创建视图，但视图不可以正常使用，当基表创建成功后，才可以正常使用
+			noforce
+				基表不存在，不能创建视图
+				
+		with read only
+			默认可以通过视图对基表进行增删改操作，但有很多限制，with read only constraint说明视图是只读视图，不能通过该视图来进行增删改的操作
+			
+			现实开发中，基本不通过视图对表中的数据进行增删改操作。
+			
+		授权：	
+			grant create view to 用户名;
+				

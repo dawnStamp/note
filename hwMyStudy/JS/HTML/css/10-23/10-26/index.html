@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style>
+			ul,li{
+				margin:0px;
+				padding: 0px;
+			}
+			ul{
+				
+			}
+			a{
+				text-decoration: none;
+			}
+			li{
+				list-style: none;
+				float: left;
+				width: 100px;
+				height: 30px;
+				border: 1px solid red;
+				text-align: center;
+				line-height: 30px;
+			}
+			.menu div{
+				height: 30px;
+				border: 1px solid red;
+			}
+			li:hover{
+				background: black;
+			}
+			.menu{
+				display: none;
+			}
+			.menu div:hover a{
+				color: white;
+			}
+			.menu div:hover{
+				background: black;
+			}
+			.news:hover .menu{
+				display: block;
+			}
+			/*li:hover{
+				background: black;
+
+			}当鼠标悬停在li的元素上时,改变li里元素的背景颜色
+			li:hover a{
+				color: white;
+			}*/
+		</style>
+	</head>
+	<body>
+		<!--无序列表
+			<ul>
+				<li></li>
+			</ul>
+		-->
+		<ul>
+			<li><a href="http://www.baidu.com">公司介绍</a></li>
+			<li><a href="http://www.baidu.com">网站首页</a></li>
+			<li><a href="http://www.baidu.com">联系方式</a></li>
+			<li class="news">
+				<a href="http://www.baidu.com">新闻中心</a>
+				<div class="menu">
+					<div ><a href="#">新闻一</a></div>
+					<div ><a href="#">新闻二</a></div>
+					<div ><a href="#">新闻三</a></div>
+				</div>
+			</li>
+		</ul>
+	</body>
+</html>

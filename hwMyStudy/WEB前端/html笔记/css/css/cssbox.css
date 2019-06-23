@@ -1,0 +1,113 @@
+@charset "utf-8";
+/* CSS Document */
+.divstyle1{
+	border: 15px solid red;
+	width: 500px;
+	height: 300px;
+	/*外边距，四个值分别代表上，右，下，左
+	margin: 5px 10px 5px 7px;
+	*/
+	/*左外边距*/
+	margin-left: 5px;
+	/*下外边距*/
+	margin-bottom: 10px;
+	/*右外边距*/
+	margin-right: 3px;
+	/*上外边距*/
+	margin-top: 10px;
+	/*设置内边距 四个值分别代表上，右，下，左
+	padding: 5px;
+	*/
+	/*下内边距*/
+	padding-bottom: 10px;
+	/*左内边距*/
+	padding-left: 10px;
+	/*右内边距*/
+	padding-right: 10px;
+	/*上内边距*/
+	padding-top: 10px;
+	
+}
+
+.divstyle2{
+	border: 5px solid yellow;
+	width: 500px;
+	height: 300px;
+	/*设置负数，往反方向偏离*/
+	margin-top: -20px;
+	margin-left: -20px;
+	padding-left: 20px;
+}
+
+.divfloat1{
+	border: 1px solid red;
+	width: 200px;
+	height: 100px;
+	margin: 0px 2px 2px 0px;
+	/*设置浮动*/
+	float: right;
+}
+
+.divfloat2{
+	border: 1px solid red;
+	width: 200px;
+	height: 100px;
+	float: right;
+	margin: 0px 2px 2px 0px;
+}
+
+
+.posabs{
+	border: 1px solid red;
+	width: 200px;
+	height: 100px;
+	/*绝对定位，必须要设置一个坐标，left和top
+	值可以是具体的数字，也可以是百分比
+	*/
+	position: absolute;
+	left: 300px;
+	top: 200px;
+}
+
+.posrelative{
+	border: 10px solid green;
+	width: 200px;
+	height: 100px;
+	/*相对定位*/
+	position: relative;
+	left: 100px;
+	
+}
+
+.poszindex1{
+	border: 1px solid red;
+	width: 200px;
+	height: 100px;
+	background-color: aqua;
+	position: absolute;
+	left: 500px;
+	top: 500px;
+	/*控制层叠关系，数字越大，会显示在最外层*/
+	z-index: 1;
+}
+
+.poszindex2{
+	border: 1px solid red;
+	width: 200px;
+	height: 100px;
+	background-color: darkgoldenrod;
+	position: absolute;
+	left: 510px;
+	top: 510px;
+	z-index: -9999999;
+}
+.poszindex3{
+	border: 1px solid red;
+	width: 200px;
+	height: 100px;
+	background-color:cornflowerblue;
+	position: absolute;
+	left: 520px;
+	top: 520px;
+	z-index: 3;
+}

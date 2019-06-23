@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+<head>
+<!-- 引入jQuery框架，和引入js文件的方式一样 -->
+<script type="text/javascript" src="js/jquery-1.12.4.js"></script>
+
+<script type="text/javascript">
+ // 页面加载后执行代码,ready函数的参数是一个函数，我们这里使用匿名函数来操作
+// 不推荐这种写法
+/*	
+jQuery(document).ready(function(){
+	alert("jQuery初始化加载");
+});
+*/
+// 简洁写法，使用“$”代替jQuery，推荐写法，作用类似于window.onload函数
+$(function(){
+	//alert("简洁写法");
+	// js的原生方式获取dom节点的值
+	var xinwen1 = document.getElementById("xinwen").innerHTML;
+	// 原生的dom对象不能调用jquery中的函数，要想调用，必须转换，转换方式是直接使用$()包含起来
+	alert($(document.getElementById("xinwen")).html());
+	// 使用jQuery的方式获取dom节点的值
+	var xinwen2 = $("#xinwen").html();
+	alert($("#xinwen").html());
+	//alert(xinwen2);
+});	
+</script>
+<meta charset="utf-8">
+<title>jQuery</title>
+</head>
+
+<body>
+<ul id="allUl">
+	<li id="xinwen" class="xinwenClass">新闻</li>
+	<li id="junshi" style="color: red;">军事</li>
+	<li>体育</li>
+	<li>博客</li>
+	<li>微博</li>
+	<li>科技</li>
+	<li>财经</li>
+	<li>房产</li>
+</ul>
+</body>
+</html>

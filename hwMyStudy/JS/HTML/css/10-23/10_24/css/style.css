@@ -1,0 +1,309 @@
+/*初始化*/
+body{
+	margin: 0px;
+	padding: 0px;
+}
+
+
+.header{
+	width: 1000px;
+	margin-left: auto;
+	margin-right: auto;
+	background: black;
+	margin-top: 20px;
+}
+.logo{
+	float:left;
+	width: 170px;
+	height: 36px;
+	background: #0084c4;	
+}
+.title{
+	float: right;
+	width: 120px;
+	height: 14px;
+	background: #0084c4;
+}
+.text{
+	float: right;
+	width: 180px;
+	height: 12px;
+	background:yellow;
+	margin-top: 10px;
+}
+.clearfix1{
+	clear:right;
+}
+.clearfix{
+	clear: both;
+}
+.navbox{
+	background: #0084c4;
+}
+.nav{
+	width: 1000px;
+	margin: 0 auto;
+	background: black;
+}
+.nav_item{
+	float: left;
+	width: 60px;
+	height: 16px;
+	background: blue;
+	margin-right: 30px;
+	margin-top: 27px;
+}
+.phone{
+	float: right;
+	width: 236px;
+    background: #4dc24f;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.icon{
+	float: left;
+	width: 26px;
+	height: 26px;
+	border-radius:50% ;
+	background: white;
+	margin-left: 34px;
+	margin-right: 10px;
+}
+.tel{
+	float: left;
+	width: 138px;
+	height: 12px;
+	background: white;
+	margin-top: 7px;
+	
+}
+.banner{
+	height: 340px;
+	background: #1c5fa3;
+}
+.products{
+	width: 1000px;
+	margin: 60px auto 70px;
+	background: black;
+}
+.products_title{
+	float: left;
+	width: 95px;
+	height: 24px;
+	background: #0084c4;
+}
+.en{
+	float: left;
+	width: 95px;
+	height: 12px;
+	background:#979797;
+	margin-top: 12px;
+}
+.more{
+	float: right;
+	width: 32px;
+	height: 12px;
+	background: #979797;
+}
+.products_item{
+	float: left;
+	width: 234px;
+ 	background: #f0f0f0;
+ 	padding-top:10px ;
+ 	padding-bottom:17px ;
+ 	margin-top: 20px;
+ 	margin-right: 20px;
+}
+.picture{
+	width: 210px;
+	height: 146px;
+	background: #008bcc;
+	margin-left: 10px;
+}
+.item_title{
+	width: 154px;
+	height: 34px;
+	background: #008bcc;
+    margin-top: 20px;
+    margin-bottom: 15px;
+    margin-left: 10px;
+}
+.item_text{
+	width: 200px;
+	height: 34px;
+	background: #008bcc;
+	margin-left: 10px;
+}
+
+
+.aboutbox{
+	background: #f7f7f7;
+}
+.about{
+	width: 1000px;
+	margin: 0 auto;
+}
+.pic{
+	float: left;
+	width: 328px;
+	height: 260px;
+	background: #1e191d;
+}
+.rightbox{
+	float: right;
+	width: 672px;
+	background: #008bcc;
+	padding-top: 36px;
+	padding-bottom: 47px;
+}
+.about_title{
+	float: left;
+	width: 94px;
+	height: 20px;
+	background: #c7ffff;
+	margin-left: 30px;
+}
+.about_en{
+	width: 87px;
+	height: 12px;
+	background: #c7ffff;
+	margin-top: 8px;
+	margin-left: 10px;
+}
+.about_text{
+	width: 632px;
+	height: 83px;
+	background: #c7ffff;
+	margin-top: 30px;
+	margin-bottom: 32px;
+	margin-left: 30px;
+}
+.about_more{
+	width: 60px;
+	height: 12px;
+	background: yellow;
+	margin-left: 30px;
+}
+
+
+.bigbox{
+	width: 1000px;
+	margin: 60px auto 40px;
+}
+.case{
+	float: left;
+	width: 460px;
+	background: #F7F7F7;
+}
+.case_title{
+	width: 94px;
+	height: 26px;
+	background: red;
+	float: left;
+}
+.case_en{
+	width: 46px;
+	height: 12px;
+	background:#0084C4;
+	float: left;
+	margin-top: 14px;
+	margin-left: 10px;
+}
+.case_more{
+	width: 30px;
+	height: 12px;
+	background: #353535;
+	float:right;
+	margin-top: 10px;
+}
+.casebox{
+	float: left;
+	width: 144px;
+	background: black;
+	margin-right: 13px;
+}
+.logopicture{
+	width: 144px;
+	height: 100px;
+	background: yellow;
+	margin-top: 22px;
+}
+.logoname{
+	width: 144px;
+	height: 30px;
+	background: blue;
+}
+
+.news{
+	float: right;
+	width: 470px;
+	background: #F7F7F7;
+}
+.newsbox{
+	margin: 20px 0;
+}
+.news_pic{
+	float: left;
+	width: 170px;
+	height: 118px;
+	background: #0084C4;	
+}
+.wenzi{
+	float: right;
+	width: 275px;
+	background: yellow;
+}
+.news_title{
+	width: 265px;
+	height: 20px;
+	background: #0084C4;
+}
+.news_text{
+	width: 265px;
+	height: 54px;
+	background: #0084C4;
+	margin: 16px 0;
+}
+.time{
+	width: 30px;
+	height: 12px;
+	background: #0084C4;
+}
+
+
+.tiao{
+	widows: 1260px;
+	height: 22px;
+	background: #1f2228;
+}
+
+
+.weilan{
+	
+	background: #121419;
+	padding-left:48px;
+	padding-right:48px;
+}
+.text_text{
+	float: left;
+	width:430px ;
+	height: 32px;
+	
+	margin-top: 24px;
+	margin-bottom: 26px;
+	background: #122032;
+}
+.tubiao{
+	float: right;
+	width: 230px;
+	background: blue;
+	margin-top: 24px;
+	margin-bottom: 24px;
+}
+.text_tubiao{
+	float: left;
+	width: 32px;
+	height: 32px;
+	background: #e01e2c;
+	margin-right: 6px;
+}

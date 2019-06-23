@@ -1,0 +1,202 @@
+/*初始化*/
+body{
+	margin: 0px;
+	padding: 0px;
+}
+a{
+	text-decoration: none;
+}
+
+.headerbox{
+	background: #292929;
+}
+.header{
+	width:1000px ;
+	margin: 0 auto;
+	padding-top:20px ;
+	padding-bottom:20px ;
+}
+.logo{
+	float: left;	
+}
+.nav{
+	float: right;
+	margin-top: 22px;
+}
+
+.nav div{
+	float: left;
+	width: 76px;
+	height: 14px;
+	border-left: 1px dashed #848484;
+	font-size: 14px;
+	text-align: center;
+	line-height: 14px;
+	
+}
+.nav a{
+	color: #fbfcff;
+}
+.clearfix{
+	clear: both;
+}
+
+
+.banner a{
+	display: block;
+	widows: 100%;
+	height: 473px;
+	background-image:url(../img/banner.jpg) ;
+	background-repeat:no-repeat ;
+	background-position:center ;
+	background-size: 100%;
+}
+.newsbox{
+	background: #e5e5e5;
+	padding: 30px 0px;
+}
+.news{
+	width: 1000px;
+	margin: 0 auto;
+}
+.icon{
+	float: left;
+}
+.wenzi{
+	float: left;
+	margin-left: 10px;
+}
+.title{
+	font-size: 36px;
+	color: #2f2f2f;
+	margin-bottom: 15px;
+}
+.small_title{
+	font-size:16px ;
+	color: #b8bebc;
+}
+.neirong{
+	float: right;
+	width: 584px;
+}
+.neirong_title{
+	font-size: 18px;
+	margin-bottom: 14px;
+	
+}
+.neirong_title a{
+	color:#d65e3c;
+}
+.text{
+	font-size: 12px;
+	line-height: 16px;
+}
+.text a{
+	color: #8f95af;
+}
+.time{
+	font-size: 12px;
+	margin-top: 9px;
+}
+.time a{
+	color: #8f95af;
+}
+.productsbox{
+	background: #f0f0f0;
+	padding-top:65px ;
+	padding-bottom: 76px;
+}
+.products{
+	width: 1000px;
+	margin: 0 auto;
+}
+.item{
+	float: left;
+	width: 333px;
+	/*border:1px solid red
+	background:red;*/
+}
+.picture{
+	height: 210px;
+	text-align: center;/*同样适合图片*/
+}
+.products_title{
+	font-size:14px ;
+	color: #273039
+	text-align:center;
+	margin: 38px 0px 20px;
+}
+.more{
+	text-align: center;
+	font-size: 12px;
+	
+}
+.more a{
+	color: #ec4d3a;
+	text-decoration: underline;
+}
+.about{
+	width: 1000px;
+	margin:0 auto;
+	padding: 60px 0px;
+}
+.about_wenzi{
+	float: left;
+	width: 500px;
+}
+.about_picture{
+	float: right;
+}
+.about_title{
+	font-size: 36px;
+	color: #31281f;
+}
+.about_text{
+	font-size: 14px;
+	line-height: 26px;
+	color: #7c8779;
+	margin-top: 36px;
+	margin-bottom: 50px;
+}
+.about_btn{
+	width: 150px;
+	height: 42px;
+	background: #e64a3d;
+	font-size:20px ;
+	text-align:center ;
+	line-height: 42px;
+}
+.about_btn a{
+	color: #ffd9cc;
+}
+
+
+.foot{
+	height: 290px;
+	background-repeat:repeat-x;
+	background-image: url(../img/bg_img.jpg);
+	
+}
+.foot_box{
+	margin: 0 auto ;
+	width: 1000px;
+	background: blue;
+
+}
+/*.foot_text{
+	width: 676px;
+	height: 118px;
+
+}
+.foot_text a{
+	color: #4a5d85;
+}
+.foot_text1{
+	font-size: 14px;
+	width:58px ;
+	height: 14px;
+}
+.foot_text1 a{
+	color: #2a2e2f;
+}
+*/

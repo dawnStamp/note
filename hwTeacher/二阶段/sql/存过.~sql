@@ -1,0 +1,16 @@
+CREATE OR REPLACE PROCEDURE first_procedure(
+--参数
+id IN varchar2(255)--入参
+name OUT varchar2(255)--出参
+
+)
+IS
+--定义块
+
+BEGIN
+  --执行块
+  dbms_output.put_line(1111);
+  
+  --EXCEPTION
+    --异常处理块  
+END;

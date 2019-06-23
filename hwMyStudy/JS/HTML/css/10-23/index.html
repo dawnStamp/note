@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<!--
+		浮动
+		float:left    左浮动
+		float:right   右浮动
+		清除浮动
+		clear：left    清除左浮动
+		       right   清除右浮动
+		       both    清除两边浮动
+		       
+		       1、当同级元素之间某个元素要另起一行排列，则在这个元素前面添加一个清除浮动的盒子
+		       		<div class="clearfix"></div> 最好加这个盒子
+		       2、父子级元素之间如果父级元素没有浮动，子级元素有浮动的子级，则在最后那个浮动的
+		                    子级后面添加一个清除浮动的盒子
+		       -->
+		<style type="text/css">
+			.bax1{
+				width: 300px;
+				height: 300px;
+				background: blue;
+				float: left;
+			}
+			.bax2{
+				width: 300px;
+				height: 300px;
+				background:yellow;
+				float: left;
+			}
+			.bax3{
+				width: 300px;
+				height: 300px;
+				background:red;
+				float: left;
+			}
+			.clearfix{
+				clear:left;
+			}
+			.father{
+				background: yellow;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="father">
+			<div class="bax1"></div>
+			<div class="bax2"></div>
+			<div class="bax3"></div>
+			<div class="clearfix"></div>
+		</div>
+		
+	</body>
+</html>

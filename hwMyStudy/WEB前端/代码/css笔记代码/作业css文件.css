@@ -1,0 +1,98 @@
+@charset "utf-8";
+/* CSS Document */
+body{
+	margin: 0;
+	padding: 0;
+}
+a{
+	text-decoration: none;
+}
+
+.headbox{
+	height: 160px;
+	
+}
+
+.head{
+	height: 150px;
+	width: 780px;
+	margin-left: auto;
+	margin-right: auto;
+	padding-top: 5px;
+}
+.navbarbox{
+	width: 780px;
+	margin-top: 1px;
+	margin-left: 410px;
+}
+.fant{
+	height: 22px;
+	margin-left: auto;
+	margin-right: auto;
+	font-size: 15px;
+	float: left;
+	margin-left: 20px;
+}
+
+
+.clearfix{
+	clear: both;	
+}
+
+
+.box1{
+	height: 600px;
+	
+	margin-top: 5px;
+}
+
+.box22{
+	margin-left: 25%;
+	margin-right: 25%;
+	background-color: darkolivegreen;
+}
+.leftbox{
+	width: 220px;
+	height: 600px;
+	background-color:darkkhaki;
+	float: left;
+}
+.weather{
+	height: 100px;
+	width: 180px;
+	float: left;
+	margin-left: 10px;
+}
+
+.hh{
+	float:left;
+	margin-top: 34px;
+}
+
+.middle{
+	margin-left: 10px;
+	width: 280px;
+	height: 600px;
+	float: left;
+}
+
+.image{
+	width: 380px;
+	height: 130px;
+	
+}
+
+.piuh{
+	float: left;
+	margin-right: 13px;
+}
+
+.rightbox{
+	width: 180px;
+	height: 600px;
+	background-color:darkkhaki;
+	float: right;
+	margin-right: -15px;
+	margin-left: 10px;
+}
+

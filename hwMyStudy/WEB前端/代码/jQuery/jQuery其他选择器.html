@@ -1,0 +1,141 @@
+<!doctype html>
+<html>
+<head>
+<style type="text/css">
+.oddStyle{
+	background-color: brown;
+	font-size: 30px;	
+	}
+	.oddStyle1{
+	  font-weight: bold;
+		
+	}	
+</style>
+<script type="text/javascript" src="jQuery框架/jquery-1.12.4.js"></script>
+<script type="text/javascript">
+// jQuery页面加载后执行
+$(function(){
+	// 获取第一个li  :first 获取第一个元素
+	var firstLi = $("li:first");
+	// 和“:first”作用一样的，还可以使用函数first()
+	var firstLi1 = $("li").first();
+	// 第一个元素的next,和第一个元素同位置
+	var firstNext = firstLi.next();
+	
+	// 获取最后一个li :last
+	var lastLi = $("li:last");
+	// 和“:last”作用一样的，还可以使用函数last()
+	var lastLi1 = $("li").last();
+	//alert("第一个li：" + firstLi1.html() + ",最后一个li：" + lastLi1.html());
+	// 前一个元素
+	var lastPre = lastLi.prev();
+	//alert("最后一个元素的前一个元素：" + lastPre.html());
+	
+	// 给表格的基数行和偶数行设置不同的背景色
+	// 1.css:设置样式，css("样式属性","样式值")
+	$("tr:even").css("color","#085612");
+	// 2.css设置样式  css({"":"","":"","":""})
+	$("tr:even").css({"background-color":"#349834","font-weight":"bold"});
+	// 基数行设置样式，使用另外一种方式 addClass，引用外部定义好的css样式，直接写class名称
+	$("tr:odd").addClass("oddStyle oddStyle1");
+	
+	// 查找页面上所有的按钮  input type="button"
+	// [attribute=value]  匹配给定的属性是某个特定值的元素
+	var btns = $("input[type='button']");
+	//alert("按钮的个数：" + btns.length);
+	// 获取输入框的值  
+	// val(): 获得匹配元素的当前值 (不加参数)，加了参数，就是设置值
+	var inputValue = $("input[name='inputName']").val();
+	$("input[name='inputName']").val("修改以后的值");
+	alert(inputValue);
+	
+	// 显示的值，使用text()
+	var spanText = $("span").text();
+	alert("span的值：" + spanText);
+	// 给span重新赋值，使用text函数，加上参数，参数值就是重新赋的值
+	$("span").text("span重新赋值");
+});	
+	
+// 删除基数行样式
+function removeOddStyle()
+	{
+		// 删除名称为“oddStyle”的class
+		//$("tr:odd").removeClass("oddStyle");
+		// 如果removeClass函数中不写参数，就是要删除所有的class
+		$("tr:odd").removeClass();
+	}
+</script>
+<meta charset="utf-8">
+<title>jQuery其他选择器</title>
+</head>
+
+<body>
+<ul>
+	<li>电脑</li>
+	<li>电话</li>
+	<li>电视机</li>
+	<li>冰箱</li>
+</ul>
+<table border="1" cellspacing="0">
+ <thead>
+ 	<td>用户名</td>
+	<td>毕业学校</td>
+	<td>出生日期</td>
+	<td>籍贯</td>
+ </thead>
+	<tr>
+		<td>张三</td>
+		<td>北京大学</td>
+		<td>1997.12.1</td>
+		<td>江西南昌</td>
+	</tr>
+	<tr>
+		<td>张三</td>
+		<td>北京大学</td>
+		<td>1997.12.1</td>
+		<td>江西南昌</td>
+	</tr>
+	<tr>
+		<td>张三</td>
+		<td>北京大学</td>
+		<td>1997.12.1</td>
+		<td>江西南昌</td>
+	</tr>
+	<tr>
+		<td>张三</td>
+		<td>北京大学</td>
+		<td>1997.12.1</td>
+		<td>江西南昌</td>
+	</tr>
+	<tr>
+		<td>张三</td>
+		<td>北京大学</td>
+		<td>1997.12.1</td>
+		<td>江西南昌</td>
+	</tr>
+	<tr>
+		<td>张三</td>
+		<td>北京大学</td>
+		<td>1997.12.1</td>
+		<td>江西南昌</td>
+	</tr>
+	<tr>
+		<td>张三</td>
+		<td>北京大学</td>
+		<td>1997.12.1</td>
+		<td>江西南昌</td>
+	</tr>
+	<tr>
+		<td>张三</td>
+		<td>北京大学</td>
+		<td>1997.12.1</td>
+		<td>江西南昌</td>
+	</tr>
+</table>
+<input type="button" onClick="removeOddStyle()" value="删除基数行样式" /><br>
+<input type="button"  value="div的个数" /><br>
+<input type="button" value="class选择器" /><br>
+<input type="button"  value="选择器的嵌套" /><br>
+<input type="text" name="inputName" value="默认值，可以修改"/><span>span标签中提示的信息</span>
+</body>
+</html>

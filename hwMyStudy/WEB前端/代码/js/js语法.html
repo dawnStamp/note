@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>js语法</title>
+</head>
+
+<body>
+<script type="text/javascript">
+	//不定义变量，直接赋值
+	temp = "这是一个没有定义的变量";
+	//alert(temp);
+	//定义一个变量，使用关键字var ,在js中，定义表里只有一个关键字var，各种数据类型都支持
+	var username = "liuweijian";
+	var age = 20;
+	//可以重复定义变量(不推荐定义重复变量)
+	var username = "fengchen";
+	//如果不赋值，默认是：undefined
+	//可以重新赋其他类型的值
+	username= 20；
+	//变量不能把以数字开头     例：var 1user = "hello";
+	
+	alert("用户名："+username + ",年龄"+age);
+	</script>
+	
+	
+	<script>
+	//页面打印
+		//document.write("你好");
+		//换行
+		//document.write("<br>");
+		var username = "hello";
+		var pwd = "123456";
+		//凭借用户名和密码，一起打印
+		document.writeln(username+pwd);
+	
+		
+	</script>
+</body>
+</html>

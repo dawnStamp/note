@@ -1,0 +1,65 @@
+@charset "utf-8";
+/* CSS Document */
+div{
+	/*高度，宽度，边框*/
+	height: 100px;
+	width: 200px;
+	border: 1px solid red;
+}
+
+/*定义一个类选择器的样式
+.样式名称{
+	样式属性：样式值；
+	...
+
+
+}
+调用时使用标签的class属性*/
+
+.one{
+	font-size: 20px;
+	font-family:Cambria, Hoefler Text, Liberation Serif, Times, Times New Roman, serif;
+	font-weight:100;
+	/*!important强制使用某一个样式，优先级最好*/
+	color: blue;
+}
+
+.two{
+	color: red;
+}
+/*多个标签使用同样的样式，中间用逗号隔开*/
+h1,p{
+	color:chartreuse;
+	font-size: 30px;
+	/*不加粗*/
+	font-weight: normal;
+}
+
+/*定义一个id选择器的样式
+#样式名称{
+样式属性：样式值；
+	...
+}
+调用时使用标签的id属性
+*/
+
+
+
+#three{
+	color: darkblue;
+}
+
+#four{
+	color: aliceblue;
+}
+
+/*只对p标签起作用*/
+p#pstyle{
+	font-size: 20px;
+}
+
+
+div span{
+	color: rebeccapurple;
+	font-weight: bold;
+}

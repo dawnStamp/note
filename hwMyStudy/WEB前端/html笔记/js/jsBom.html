@@ -1,0 +1,119 @@
+<!doctype html>
+<html>
+<head>
+<script type="text/javascript">
+// js中的三种弹窗
+	// 弹窗（常用）
+function alertTest()
+	{
+		// alert 只是做提示，弹窗中只有一个按钮
+		alert("这是一个alert弹窗");
+	}
+// 确认弹窗（常用）
+function confirmTest()
+	{
+		// 确认框，给出提示，让用户确认某一种操作，这种操作可以取消
+		// 函数conform("提示语言"),返回true或false，点击“确定”返回true，点击“取消”返回false
+		if(confirm("你确定要删除吗？"))
+			{
+				// 点击确认后执行的操作
+				alert("你点击了确定操作，数据删除成功！");
+			}
+		else
+			{
+				// 点击取消后执行的操作
+				alert("你点击了取消操作，数据没有删除！");
+			}
+	}
+// 弹窗中可以输入数据
+function promptTest()
+	{
+		// 可以输入数据，参数一：要输入内容的提示，参数二：要输入的内容的默认值
+		// 弹框中有两个按钮，“确认”：能够获取输入的内容   “取消”：舍弃输入的内容
+		var userName = prompt("请输入用户名","aobama");
+		alert("输入的用户名为：" + userName);
+	}
+// 计算浏览器屏幕的宽度和高度
+function showBrowerInfo()
+	{
+		// 宽度 以像素计，减去界面特性，比如窗口任务栏
+		var width = screen.availWidth;
+		// 高度 以像素计，减去界面特性，比如窗口任务栏
+		var height = screen.availHeight;
+		alert("宽度： "  + width + "，高度：" + height);
+	}
+// 页面跳转
+function locationTest()
+	{
+		// 赋值后，直接页面跳转（重点掌握）
+		location.href="jsDom.html";
+		// 不赋值，返回当前页面的地址
+		//alert(location.href);
+	}
+// 后退
+function backTest()
+	{
+		// 与在浏览器点击后退按钮相同
+		history.back();
+	}
+// 前进
+function forwarTest()
+	{
+		// 与在浏览器中点击按钮向前相同
+		history.forward();
+	}
+// 前进或后退
+function goTest()
+	{
+		// 参数：正数是前进，负数是后退 , 0 刷新当前页面
+		// 参数中一般只会用到1或-1
+		history.go(0);
+	}
+// 定义一个变量，存窗口的信息
+var myWin;	
+// 打开新的窗口
+function openNewWin()
+	{
+		// 打开新的窗口
+		// 参数一：新窗口中要装载页面的地址
+		// 参数二：名称
+		// 参数三：新窗口的设置
+		myWin = window.open("jsDom.html","test","width=800,height=500,toolbar=yes, location=yes, directories=no, status=no, menubar=yes, scrollbars=yes, resizable=no, copyhistory=yes");
+	}
+// 关闭窗口
+function closeWin()
+	{
+		myWin.close();
+	}
+</script>
+<meta charset="utf-8">
+<title>jsBom</title>
+</head>
+
+<body>
+<input type="button" onClick="alertTest()" value="测试alert弹窗" />
+<input type="button" onClick="confirmTest()" value="带有确认提示的删除" />
+<input type="button" onClick="promptTest()" value="请输入用户名" />
+<input type="button" onClick="showBrowerInfo()" value="浏览器信息" /><br>
+<script type="text/javascript" >
+ document.writeln("浏览器的版本号：" + navigator.appVersion + "<br>");
+ document.writeln("浏览器的名称：" + navigator.appName + "<br>");
+ document.writeln("浏览器的代码名称：" + navigator.appCodeName + "<br>");	
+ document.writeln("浏览器的平台：" + navigator.platform + "<br>");		
+</script>
+<script type="text/javascript">
+ // location	
+ document.writeln("页面地址：" + location.href + "<br>");
+	document.writeln("主机：" + location.host + "<br>");
+	document.writeln("主机名称：" + location.hostname + "<br>");
+	document.writeln("端口号：" + location.port + "<br>");
+	document.writeln("协议：" + location.protocol + "<br>");
+</script>
+<input type="button" onClick="locationTest()" value="跳转到DOM页面" /><br>
+<input type="button" onClick="backTest()" value="后退" /><br>
+<input type="button" onClick="forwarTest()" value="前进" /><br>
+<input type="button" onClick="goTest()" value="go" /><br>
+<input type="button" onClick="openNewWin()" value="打开新的窗口" /><br>
+<input type="button" onClick="closeWin()" value="关闭窗口" /><br>
+</body>
+</html>

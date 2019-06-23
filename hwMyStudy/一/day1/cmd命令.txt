@@ -1,0 +1,13 @@
+cls		清空
+d:		将盘符切换到d盘
+cd		控制文件夹
+	cd  xxx 	进入xxx文件夹
+	cd  xxx\yyy     进入xxx文件夹下的yyy文件夹
+	cd  ..		返回路径的上一层
+
+
+将java文件编译成class文件：
+	javac 文件名.java
+
+运行class文件：
+	java 文件名

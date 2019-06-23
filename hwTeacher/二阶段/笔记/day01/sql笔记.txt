@@ -1,0 +1,71 @@
+有哪些数据库：
+oracle
+mysql
+sqlserver
+db2
+sydase
+
+java						--oracle	大型数据库
+							--mysql		中小型数据库
+
+.net  用于制作静态页面		--sqlserver
+
+php							--mysql			
+
+----------------------------------------------------------------------------
+从事某一个领域，就使用对应的数据库
+只需要精通一个数据库，其他的很多都是类似的，因为数据库中有一门特殊的语言，即sql语言，结构化查询语言
+
+关系型数据库的概念：
+	1.数据库中有一个最重要的对象，叫做表
+	2.学生与老师之间，存在关系，表与表之间也存在关系，表就代表了我们生活中的某一个对象
+	3.面向对象的数据库，基于xml的数据库，当然主流的还是现在我们学的关系型数据库
+	
+数据库中的对象：
+	表、字段、列、行、视图、索引
+	
+将数据永久保存下来：
+	1.保存到文件中，但是保存在文件中，存取数据教难，只适合用于一些逻辑较为简单的数据存储。
+	2.保存到关系型数据库中，存取数据很便捷，便于管理
+	
+关系在文件中体现出来，是一件很复杂的事，而在数据库中，管理关系，体现关系，是一件很简单的事。
+
+数据库中的对象--表
+		  java--类
+
+表里面的记录--记录
+		java--对象
+
+连接用户：
+	sqlplus 用户名
+		sqlplus system
+		sqlplus "/as sysdba"
+		
+切换用户：
+	安全的：conn system
+			输入密码
+	不安全的：conn system/密码;
+	
+	sys用户：conn /as sysdba
+	
+查看当前用户名：
+	select user from dual;
+	
+查看当前时间：	
+	select sysdate from dual;	
+	
+创建用户：
+	create user 用户名 identified by 密码;
+	需要创建一个普通用户来创建表、视图...等对象，建立连接，需要授权才可以进行这些操作。
+	
+授权：
+	grant connect,resource to 用户名;
+	
+验证：
+	切换到自己的用户
+
+查询oracle有哪些表空间:
+	select global_name from global_name;
+	
+名：TNS_ADMIN
+值：C:\oraclexe\app\oracle\product\11.2.0\server\network\ADMIN

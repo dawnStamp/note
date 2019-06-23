@@ -1,0 +1,4 @@
+静态方法和非静态方法的区别：
+	public static void ss(){}
+	public void sss(){}
+	

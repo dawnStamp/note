@@ -1,0 +1,42 @@
+
+子查询(嵌套查询)
+	
+	create table 表名
+	as
+	select 列名/* from 需要复制的表名;
+	
+	is not null 	不为空
+	is null 		为空
+	<>				不等于
+	
+	--展示工资相同的员工信息
+	select * from emp e where 2<= (select count(*) from emp where e.salary=salary);
+
+	--查询出工资大于平均工资的员工信息
+	select * from emp e,(select avg(salary) a from emp) s where e.salary>s.a;
+
+	--根据工资进行排名，工资相同的情况下，排名相同
+	select e.*,(select count(*) from emp p where e.salary < p.salary)+1 ss from emp e order by ss;
+	
+	--入职时间相同的员工
+	select * from emp e where 2<= (select count(*) from emp where e.starttime=starttime);
+
+	--查询每个部门工资最高的前两名
+	select * from emp e where 
+	(select count(*) from emp p where 
+	  p.salary>e.salary 
+	  and p.dept_no=e.dept_no
+	) < 2;
+
+	
+	rownum		伪列
+		是一个序列，会根据sql语句自动给你加上一列排好顺序的序列号。
+		1.序列号从1开始，依次往后排列
+		2.rownum是对结果集加的一个伪列，即先查到结果集之后再加上去的一个列，要先有结果集，简单的说rownum是对符合条件结果的序列号。
+		
+		> >= = between..and..			false
+		< <= != 						true
+		
+	练习1：
+		--工资最高的前三名
+		select * from (select t.* from emp t order by salary desc) where rownum <4;

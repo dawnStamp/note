@@ -1,0 +1,92 @@
+@charset "utf-8";
+/* CSS Document */
+.divstyle1{
+	border: 5px solid red; 
+	height: 300px;
+	width: 500px;
+	/*外边距，四个值分别代表上右下左*/
+	margin: 5px 10px 5px 7px;
+	padding: 5px;
+}
+.divstyle2{
+	border: 5px solid green;
+	width: 500px;
+	height: 300px;
+	margin: 5px 5px 5px -20px;
+}
+
+.divfloat1{
+	border: 1px solid red; 
+	height: 100px;
+	width: 200px;
+	margin: 0px 2px 2px 0;
+	/*设置浮动*/
+	float:left;
+}
+
+.divfloat2{
+	border: 1px solid blue; 
+	height: 100px;
+	width: 200px;
+	float: right;
+}
+
+
+.posaba{
+	/*绝对定位，必须要设置一个坐标，left和top
+	值可以是数字，也可以说是百分比*/
+	border: 1px solid blue; 
+	height: 100px;
+	width: 200px;
+	position:absolute;
+	left: 100px;
+	top: 100px;
+	
+}
+
+
+
+.posrelative{
+	border: 1px solid yellow; 
+	height: 100px;
+	width: 200px;
+	/*相对定位*/
+	
+	position:relative;
+	left: 100px;
+	top: 100px;
+}
+
+
+.poszindex1{
+	border: 1px solid yellow; 
+	height: 200px;
+	width: 100px;
+	background-color: aqua;
+	position: absolute;
+	left: 500px;
+	top:500px;
+	/*控制层叠关系，数字越大 显示就会在最外层*/
+	z-index: 1;
+}
+
+.poszindex2{
+	border: 1px solid yellow; 
+	height: 200px;
+	width: 100px;
+	background-color: pink;
+	position: absolute;
+	left: 510px;
+	top:510px;
+	z-index: 2;
+}
+.poszindex3{
+	border: 1px solid yellow; 
+	height: 200px;
+	width: 100px;
+	background-color:greenyellow;
+	position: absolute;
+	left: 520px;
+	top:520px;
+	z-index: 3;
+}

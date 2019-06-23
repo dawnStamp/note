@@ -1,0 +1,81 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>js字符串</title>
+</head>
+
+<body>
+<script type="text/javascript">
+	//定义一个字符串
+	var username= "helloworld!";
+	//字符串长度,一个字符占一个长度，空格也会占一个长度（常用，熟练掌握）
+	var usernamelength = username.length;
+	document.writeln("字符串长度："+usernamelength+"<br>");
+	//charAt(2):查找字符串中某个索引处的字符，从0开始
+	document.write("charAt:"+username.charAt(2)+"<br>");
+	//将字符串中的字母转成大写（常用，熟练掌握）
+	document.writeln("toUpperCase:"+username.toUpperCase()+"<br>");
+	//将字符串中的字母转成小写（常用，熟练掌握）
+	document.writeln("toLowerCase:"+username.toLowerCase()+"<br>");
+	//indexOf("") 某个字符第一次出现的下标位置，区分大小写，如果不存在，返回-1
+	document.writeln(username.indexOf("e")+"<br>");
+	//substring(start,stop)截取两个参数之间的字符串，包含第一个参数，不包含第二个参数
+	document.writeln(username.substring(0,2)+"<br>");
+	//substr(start,length)截取字符串，从start开始，截取length个长度,包含start
+	document.writeln(username.substr(1,3)+"<br>");
+	//replace()替换
+	document.writeln(username.replace("h","k")+"<br>");
+	//判断数字,放回false是数字，是true不是数字
+	document.writeln("123是否为数字："+ isNaN("123")+"<br>");
+	//最大数
+	document.writeln("number最大数："+ Number.MAX_VALUE+"<br>");
+	//不知道的一个数字
+	document.writeln("number的NaN："+ Number.NaN+"<br>");
+	//保留小数位,四舍五入
+	var num1= 12.31465987;
+	document.writeln("保留两位小数："+ num1.toFixed(2)+"<br>");
+	//当前日期
+	var curDate = new Date;
+	//月中的某一天
+	var DAY = curDate.getDate(); 
+	//某一月（0-11）当前月要加一
+	var month = curDate.getMonth();
+	//年
+	var year = curDate.getFullYear();
+	document.writeln("当前日期："+year+"-"+(month+1)+"-"+DAY+"<br>");
+	//数学中的常见常量
+	document.writeln("数学常量e："+ Math.E+"<br>");
+	//数学中的圆周率
+	document.writeln("数学常量pi："+ Math.PI+"<br>");
+	//绝对值
+	document.writeln("绝对值："+ Math.abs+"<br>");
+	//往上舍一
+	document.writeln("数："+ Math.ceil(1.00000001)+"<br>");
+	//随机数 范围是是0到一
+	document.writeln("随机数："+ Math.random()+"<br>");
+	
+	
+	
+	//数组  直接赋值   可以当成其他数组中的一个元素
+	var arr1 = [1,23,33,34];
+	//用下标取数组中的元素，从0开始,数组中不存在越界的问题
+	document.writeln(arr1[0]+"<br>");
+	//给数组中元素赋值，可以越过其中的元素，直接给后面的赋值
+	arr1[5] = "abc";
+	document.writeln(arr1[3]+","+arr1[5]+",数组长度"+arr1.length+"<br>");
+	
+	
+	//数组的第二种定义方式
+	var arr2 = [];
+	arr2[0] ="123";
+	document.writeln(arr2[0]+",数组长度"+arr2.length+"<br>");
+	
+	
+	// 第三种定义数组的方式 面向对象
+	var arr3 = new Array();
+	arr3[0] = "zxc";
+	document.writeln(arr3[0] + ",数组长度： " + arr3.length + "<br>");
+	</script>
+</body>
+</html>

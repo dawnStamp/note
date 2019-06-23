@@ -1,0 +1,70 @@
+<!doctype html>
+<html>
+<head>
+<script type="text/javascript">
+ // 定义一个不带参数的函数
+ /*
+   function 函数名(参数列表)
+   {
+     代码块
+   }
+   function：关键字，必须的
+   函数名：命名规则，参数变量的命名规则
+   参数列表：参数可以没有，也可以有多个，要根据业务需求来设置参数
+   不管有没有参数，()是必须的
+   不管代码块有没有，{}是必须的
+ */	
+ function sayHello()
+	{
+		// 要执行的代码块
+		alert("这是我的第一个函数");
+	}
+
+/*定义带有参数的函数
+userName:参数，用户名
+*/
+	function showUserInfo(userName,pwd)
+	{
+		alert("用户名：" + userName + "，密码：" + pwd);
+	}
+/*
+定义带有两个数字参数的函数
+*/	
+function add(num1,num2)
+	{
+		var num = num1 + num2;
+		alert("求和结果：" + num);
+	}
+	
+// 匿名函数
+var f = function()
+{
+	alert("匿名函数");
+}	
+</script>
+<meta charset="utf-8">
+<title>js函数</title>
+</head>
+
+<body>
+<script type="text/javascript">
+// 1.调用函数，直接在js代码块中调用
+//sayHello();
+// 如果参数中传递字符串，必须使用""或''把字符串引起来	
+//showUserInfo("奥巴马","123456");
+// 调用带有数字参数的函数，参数中不使用引号，直接写数字
+//add(10,30);	
+// 调用匿名函数
+	f();
+</script>
+<!-- 2.调用函数，在html页面中，使用事件调用,只要有支持事件的html标签，都可以调用函数 
+       在事件中，直接写“函数名()”
+-->
+<a href="javascript:void(0)" onClick="sayHello()">超链接调用函数</a><br>
+<input type="button" value="按钮调用函数" onClick="sayHello()" /><br>
+<!-- 单引号和双引号嵌套时，要保证引号的成对对应 -->
+<input type="button" value="显示用户信息" onClick="showUserInfo('布什','123456')" /><br>
+<!--调用带有数字参数的函数，参数中不使用引号，直接写数字 -->
+<input type="button" value="数字求和" onClick="add(2,4)" /><br>
+</body>
+</html>

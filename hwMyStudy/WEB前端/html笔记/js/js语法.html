@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>js语法</title>
+</head>
+
+<body>
+<script type="text/javascript">
+  // 不定义变量，直接赋值
+	temp = "这是一个没有定义的变量";
+	//alert(temp);
+  // 定义一个变量，使用关键字 var ,在js中，定义变量只有一个关键字var，各种数据类型都支持
+	var userName = "aobama";
+	var age = 20;
+	// 也可以一次定义多个变量,如果不赋值，默认是：undefined
+	var i,j,k=0;
+	// 可以重复定义变量（不推荐这样定义）
+	var userName = "bushi";
+	// 可以重新赋其他类型的值
+	userName = 20;
+	// 关键字不能作为变量名
+	//var var = 10;
+	// 变量不能以数字开头
+	//var 1user = "hello";
+	// 运算符不能出现在变量中
+	// var bos%sss = 10;
+	//alert("用户名：" + userName + "，年龄：" + age + "，i=" + i + ",k=" + k );
+</script>
+
+<script type="text/javascript">
+// 页面打印
+	document.writeln("你好");
+	// 换行
+	document.write("<br>");
+	var username = "hello";
+	var pwd = "123456";
+	// 拼接用户名和密码，一起打印
+	document.writeln(username+pwd);
+	// 换行
+	document.write("<br>");
+	// 定义两个数字
+	var num1 = "10";
+	var num2 = "20";
+	document.writeln(num1+num2);
+	// 换行
+	document.write("<br>");
+	// 转换数字
+	document.write(parseInt(num1) + parseInt(num2));
+	// 换行
+	document.write("<br>");
+	// 定义两个数字，带小数点
+	var num1 = "10.33";
+	var num2 = "20.22";
+	document.writeln(num1+num2);
+	// 换行
+	document.write("<br>");
+	// 转换数字
+	document.write(parseFloat(num1) + "<br>");
+	document.write(parseFloat(num2) + "<br>");
+	var n1 = parseFloat(num1);
+	var n2 = parseFloat(num2);
+	// 保留2位小数
+	document.write((n1 + n2).toFixed(2));
+</script>
+</body>
+</html>

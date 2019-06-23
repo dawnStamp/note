@@ -1,0 +1,147 @@
+<!doctype html>
+<html>
+<head>
+<script type="text/javascript">
+// 显示所有的标题
+function showTitle()
+	{
+		// 定义变量，临时存储获取到的列表数据
+		var liConent = "";
+		//alert("显示所有标题");
+		// 获取ul标签元素，通过id来获取
+		var ulEle = document.getElementById("allUl");
+		// 获取ul下所有的子节点，返回值是一个列表
+		var lis = ulEle.childNodes;
+		// 循环子元素列表
+		for(i = 1; i < lis.length; i=i+2)
+			{
+			  var liEle = lis[i];
+			  //document.writeln(liEle.innerHTML);
+				// innerHTML:html的内容，弹出数据
+				// 最后一个元素后面不加“,‘
+				if (i == (lis.length - 2))
+					{
+						liConent += liEle.innerHTML;
+					}
+				else
+					{
+						liConent += liEle.innerHTML + ",";
+					}
+				
+				//alert(liEle.innerHTML);	
+		     // 属性，是一个列表
+			var attrs = liEle.attributes;
+				for(j = 0; j < attrs.length; j++)
+					{
+						// 属性名称
+					var attrName = attrs[j].nodeName;
+						// 属性的值
+					var attrValue = attrs[j].nodeValue;
+						alert(attrName + ":" + attrValue);
+				}
+		}
+		// 把列表中的数据显示在另外一个span标签中
+		// 获取span标签
+		var showSpan = document.getElementById("showTitleSpan");
+		// 给span标签赋值
+		showSpan.innerHTML = liConent;
+	}
+
+// 操作其他的元素
+function showOtherElement()
+	{
+		// 通过id拿到军事的li元素
+		var junshiLi = document.getElementById("junshi");
+		// 获取军事节点的父节点
+		var junshiParent = junshiLi.parentNode;
+		//alert(junshiParent);
+		// 军事的兄弟节点，这里可以一直往下走，军事节点的下一个兄弟节点是“回车换行符”，“回车换行符”的下一个兄弟节点是“体育”
+		// 自己去演示一下 前一个兄弟节点
+		var siblingJunshi = junshiLi.nextSibling.nextSibling;
+		alert(siblingJunshi.innerHTML);
+	}
+// 演示第一个或最后一个子节点，函数名区分大小写，"()"必须是英文输入法下的
+// 语法中包含的各种符号都必须是英文输入法下的	
+ function showFistOrLastChild()
+	{
+		// 获取ul标签元素，通过id来获取
+		var ulEle = document.getElementById("allUl");
+		// 取第一个子节点，ul和li的特殊结构，第一子节点是“回车符号”，要想拿到第一个li的元素，要拿“回车符号”的下一个兄弟节点
+		var fistChildLi = ulEle.firstChild.nextSibling;
+		//alert(fistChildLi.innerHTML);
+		// 最后一个子节点，最后一个子节点是“回车符号”，要想拿到最后一个li元素，要拿“回车符号”的前一个兄弟节点
+		var lastChildLi = ulEle.lastChild.previousSibling;
+		alert(lastChildLi.innerHTML);
+	}
+	
+// 其他操作html元素的函数
+function otherFunc()
+	{
+		// 返回带有指定名称的对象的集合
+		var nameEles = document.getElementsByName("userName");
+		// 要取值，要用数组的方式
+		//alert(nameEles[0].value);
+		// 返回带有指定标签名的对象的集合（常用）
+		var tagNames = document.getElementsByTagName("li");
+		//alert(tagNames.length);
+		// 获取页面上所有的input元素
+		var inputs = document.getElementsByTagName("input");
+		alert(inputs.length);
+		
+	}
+// 添加元素
+function addLi()
+	{
+		// 创建一个需要被添加的html元素
+		var yuleLi = document.createElement("li");
+		// 给新元素赋值
+		yuleLi.innerHTML="娱乐";
+		// 设置属性，参数一：属性名称，必须是html标签中存在的属性，参数二：属性的值
+		yuleLi.setAttribute("id","yule");
+		yuleLi.setAttribute("style","color:red");
+		// 往ul中添加子节点，放在最后
+		//document.getElementById("allUl").appendChild(yuleLi);
+		// 在指定的位置添加元素，在“军事”之前插入“娱乐”
+		var junshiLi = document.getElementById("junshi");
+		// 执行插入，调用insertBefore函数，参数一：要插入的新元素，参数二：已经存在的元素，新元素要插在此参数之前
+		document.getElementById("allUl").insertBefore(yuleLi,junshiLi);
+		
+	}
+// 删除节点
+function delLi()
+	{
+		// 先找到要删除的节点
+		var junshiLi = document.getElementById("junshi");
+		// 从父节点删除子节点
+		document.getElementById("allUl").removeChild(junshiLi);
+		
+		// 删除全部ul
+		//document.getElementsByTagName("body")[0].removeChild(document.getElementById("allUl"));
+	
+	}
+</script>
+<meta charset="utf-8">
+<title>jsDom</title>
+</head>
+
+<body>
+<ul id="allUl">
+	<li id="xinwen" class="xinwenClass">新闻</li>
+	<li id="junshi" style="color: red;">军事</li>
+	<li>体育</li>
+	<li>博客</li>
+	<li>微博</li>
+	<li>科技</li>
+	<li>财经</li>
+	<li>房产</li>
+</ul>
+<input name="userName" value="aobama" type="text" />
+<input type="button" value="弹出所有列表" onClick="showTitle()" /><br>
+<input type="button" value="其他的节点" onClick="showOtherElement()" /><br>
+<input type="button" value="子节点" onClick="showFistOrLastChild()" /><br>
+<input type="button" value="其他函数" onClick="otherFunc()" /><br>
+<span id="showTitleSpan"></span><br>
+<input type="button" value="添加娱乐" onClick="addLi()" /><br>
+<input type="button" value="删除节点" onClick="delLi()" /><br>
+</body>
+</html>

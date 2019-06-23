@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			div{
+				width: 300px;
+				height: 300px;
+				background: red;
+			/*	transition: 1s;*/
+				position: absolute;
+				animation: myFirst 1s;
+				
+			}
+			@keyframes myFirst{
+				/*from{
+					top:20% ;
+					left: 20%;
+				}
+				to{
+					right: 40%;
+					bottom: 40%;
+				}*/
+				0%{
+					background: red;
+				}
+				25%{
+					background: blue;
+				}
+				50%{
+					background: green;
+				}
+				75%{
+					background: yellow;
+				}
+				100%{
+					background: black;
+				}
+			}
+			/*div:hover{
+				transform: translate(200px,200px);
+				transform:translateY(100px);
+				transform:rotate(360deg);
+				transform:rotateX(360deg) translateX(300px);
+				transform: scale(2,6);
+				background: blue;
+			}*/
+		</style>
+	</head>
+	<body>
+		<div></div>
+		
+		<!--css3 转换
+		1、平移：translate（）
+		语法：transform:(x,y)
+		transform:translateX(300px)
+		transform:translateY(300px)
+		
+		
+		2、旋转
+		rotate（）
+		语法：transform:rotate(180deg)
+		把元素顺时针旋转某个角度
+		
+			  transform：rotateX(180deg)
+		3、改变元素尺寸
+		scale()
+		语法：transform:scale(x,y)
+		transform:scaleX()
+		
+		
+		
+		
+		css3动画效果：
+		1、定义动画：
+		@keyframes 动画名{
+				from{
+					初始的样式
+				}
+				to{
+					 结束的样式
+				}
+			}
+			
+			
+			
+			@keyframes 动画名{
+				
+			}
+		2、使用动画
+		 	animation:动画名 动画持续时间;
+		
+		-->
+	</body>
+</html>

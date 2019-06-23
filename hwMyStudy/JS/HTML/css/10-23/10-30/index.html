@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style>
+			.box1{
+				width: 300px;
+				height: 100px;
+				background: red;
+			}
+			.box2{
+				width: 300px;
+				height: 100px;
+				background: green;
+				position: absolute;
+				top: 200px;
+				left: 200px;
+				z-index: 3;
+			}
+			.box3{
+				width: 300px;
+				height: 100px;
+				background: blue;
+				position: absolute;
+				top: 200px;
+				left: 200px;
+				z-index: 1;
+			}
+			.father{
+				width: 500px;
+				height: 500px;
+				background: black;
+			}
+		</style>
+	</head>
+	<body>
+		<!--定位
+		1、绝对定位
+		position：absolute
+		绝对定位的元素会脱离文档流，它的方位会受到top left right bottom的影响
+		1.当父级元素没有定位时，则相对于body左上角的0.0
+		2.当父级元素有定位时，则相对于父级左上角的0.0
+		
+		2、相对定位
+		position:relative
+		相对定位的元素不会脱离文档流，它的方位会受到top left right bottom的影响
+		以其本身原来位置左上角0.0为参考系
+		
+		3、固定定位
+		position：fixed
+		固定定位的元素会脱离文档流，它的方位会受到top left right bottom的影响
+		以用户窗口为参考系（网页固定小广告）
+		-->
+		<div class="father">
+			<div class="box1"></div>
+			<div class="box2"></div>
+			<div class="box3"></div>
+		</div>
+	</body>
+</html>

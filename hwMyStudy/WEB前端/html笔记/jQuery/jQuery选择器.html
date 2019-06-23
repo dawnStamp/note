@@ -1,0 +1,101 @@
+<!doctype html>
+<html>
+<head>
+<script type="text/javascript" src="js/jquery-1.12.4.js"></script>
+<script type="text/javascript">
+// id选择器
+function idTest()
+	{
+		// 用id选择器选择div元素
+		var divSelect1 = $("#div1");
+		/*
+		html([val|fn]) : 
+		()： 函数的语法结构，必须的
+		[]：表示可以设置参数，也可以不设置参数，也就是说参数是可选的，不是必须的
+		| ：表示参数val和参数fn是平行关系，不能同时出现，一次只能设置一个
+		*/
+		alert($("#div1").html());
+		// 重新给div设置内容
+		divSelect1.html("给div重新设置内容");
+		// 参数是一个回调函数
+		/**
+		divSelect1.html(function(n){
+			alert(n);
+		});
+		*/
+	}
+// 通过标签来获取对象	
+function elementTest()
+	{
+		// 直接写标签，标签必须是html中存在的
+		// 取页面上的所有的div
+		var divs = $("div");
+		// 要想从数组中获取一个元素，可以使用下标的方式divs[0],也可以使用函数的方式divs.get(0)
+		//alert("页面上div的个数：" + divs.length + ",第一个div：" + $(divs.get(0)).html());
+		// 循环数组,这里使用jQuery中封装的each函数 语法：each(callback)
+		// 两个参数，参数一：数组中的下标 ，参数二：下标对应的数组的一个元素
+		// 调用时，可以只写一个参数，按照参数一来使用
+		divs.each(function(i,ele){
+			alert(i + ":" + $(ele).html());
+		});
+		
+	}
+// class选择器
+function classTest()
+	{
+		// class选择器，语法是“.class名称”,一个元素可以有多个类，只要有一个符合就能被匹配到
+		var classes = $(".myClass");
+		alert("myClass的个数：" + classes.length);
+	}
+// 选择器的嵌套 ，选择器嵌套时，可以是id，class，html标签的任意组合
+function otherSelect()
+	{
+		
+		// 选择多个元素，可以是id，可以是class，也可以是html元素，中间使用“,”隔开
+		// 匹配到以后，将多个被匹配到的元素返回
+		var duoge = $("#div1,.notMe,span");
+		//alert(duoge.length);
+		// 设置颜色
+		//duoge.css("color","red");
+		// 两个选择器之间使用空格,如"body input"，查找给定元素(body)的所有后代元素(input)，包含子元素，孙元素...
+		var houdai = $("body input");
+		//alert("后代个数：" + houdai.length);
+		
+		// parent > child 在给定的父元素下匹配所有的子元素
+		var ziyuansu = $("body > input");
+        //alert("子元素个数：" + ziyuansu.length);
+		// prev + next 匹配所有紧接在 prev 元素后的 next 元素，一个指定的元素最多只能匹配到一个元素
+		/*
+		var jiahao = $("span + input");
+		alert("+个数：" + jiahao.length);
+		*/
+		var jiahao = $("#div1 + #div2");
+		//alert("+个数：" + jiahao.length);
+
+		// prev ~ siblings 匹配 prev 元素之后的所有 siblings（兄弟） 元素
+		// 查找和div是兄弟关系的input元素
+		var xiongdi = $("div ~ input");
+		alert("兄弟元素个数：" + xiongdi.length);
+
+	}
+</script>
+<meta charset="utf-8">
+<title>jQuery选择器</title>
+</head>
+
+<body>
+<div id="div1">div1</div>
+<div id="div2">div2</div>
+<div id="div3">div3</div>
+<div class="notMe myClass">div class="notMe myClass"
+ <input type="text" />
+</div>
+<div class="myClass">div class="myClass"</div>
+<span class="myClass">span class="myClass"</span><br>
+<input type="button" onClick="idTest()" value="id选择器" />
+<span></span>
+<input type="button" onClick="elementTest()" value="div的个数" /><br>
+<input type="button" onClick="classTest()" value="class选择器" /><br>
+<input type="button" onClick="otherSelect()" value="选择器的嵌套" /><br>
+</body>
+</html>

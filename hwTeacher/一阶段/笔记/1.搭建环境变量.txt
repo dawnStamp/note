@@ -1,0 +1,79 @@
+java语言的发展史：
+	1991年，james gosling领导的green小组开发了面向数字家电的oak语言
+	1995年，internet迅猛发展，java语言正式问世，被美国著名杂志pc magazine评为1995年10大优秀科技产品之一
+	1998年，推出了java2平台，性能上有所提高，而且对java的基本模式进行了完善，提供了更丰富的api
+
+e语言
+C
+java
+php
+.net
+python
+andriod
+ios
+
+
+java概述：
+	java是一种编程语言，它提供了一个同时同于程序开发、应用、部署的环境 。java语言主要定位于网络编程，使得程序可以最大限度的利用		网络资源。
+
+java的特点：
+	1.跨平台性
+	2.简单易用性
+	3.面向对象
+	4.多线程
+	5.分布式、动态性、可靠性、安全性
+
+java开发环境的搭建：
+	jre和jdk的区别：
+		JRE:Java Runtime Environment
+			JRE顾名思义是java运行时环境，包含了java虚拟机，java基础类库。是使用java语言编写的程序运行时需要的软件环境，				是提供给想运行java程序的用户使用的。
+		
+		JDK:Java Development Kit
+			JDK顾名思义是java开发工具包，是程序员使用java语言编写java程序所需的开发工具包，是提供给程序员使用的。
+
+		如果你需要运行java程序，只需要安装JRE就可以了。如果你需要编写java程序，需要安装JDK。
+
+	配置环境变量：
+		选中我的电脑，右键选择属性
+		进入后，选择高级系统设置
+		单击“环境变量”按钮
+		进入后正式开始配置
+
+		需要配置以下三项：
+			JAVA_HOME
+				配置jdk安装的路径，需进入jdk1.8.0_161文件夹下
+			例如：	
+				C:\Program Files\Java\jdk1.8.0_161
+
+			CLASSPATH
+				配置的路径为lib目录下的dt.jar和tools.jar文件
+			例如：
+				.;%JAVA_HOME%\lib\dt.jar;%JAVA_HOME%\lib\tools.jar
+				
+			PATH
+				配置的路径为bin目录下以及jre\bin目录下，当我们需要使用这两个路径下的文件或应用程序时，会动态的找到				我们需要使用的文件。
+			例如：
+				%JAVA_HOME%\bin;%JAVA_HOME%\jre\bin
+
+	验证环境变量是否配置成功：
+		在cmd窗口中输入以下指令：
+			java
+			javac
+			java -version
+				
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

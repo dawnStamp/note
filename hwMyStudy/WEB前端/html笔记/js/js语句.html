@@ -1,0 +1,164 @@
+<!doctype html>
+<html>
+<head>
+<script type="text/javascript">
+ // if语句
+ function ifTest(score)
+	{
+		//var score = 80;
+		/* 输出分数的范围  
+		[90,100]:优秀 
+		[80,89]：良好
+		[60,79]:一般
+		其他：不及格
+		*/
+		// 优秀
+		if (score >= 90)
+			{
+				alert("你得了 "  + score + ",级别是优秀");
+			}
+		// 良好
+		else if (score >= 80 && score <=89)
+			{
+				alert("你得了 "  + score + ",级别是良好");
+			}
+		// 一般
+		else if (score >= 60 && score <=79)
+			{
+				alert("你得了 "  + score + ",级别是一般");
+			}
+		// 不及格
+		else
+			{
+				alert("你得了 "  + score + ",级别是不及格");
+			}
+	}
+	
+	// 调用函数
+	//ifTest(5);
+	
+// switch语句
+function telNum(num)
+	{
+		/*
+		客服电话：
+		0：人工服务
+		1：话费查询
+		2：业务办理
+		3：流量查询
+		4：投诉建议
+		其他：挂机
+		*/
+		switch(num)
+			{
+					//case 后面可以跟数字，也可以跟字符串
+				case 0 :	
+					alert("人工服务");
+					break;
+				case 1 :
+				    alert("话费查询");
+					break;
+				case 2 :
+				    alert("业务办理");
+					break;
+				case 3 :
+				    alert("流量查询");
+					break;
+				case "s" :
+				    alert("投诉建议");
+					break;
+				default:
+					alert("挂机");
+			}
+	}
+	// 调用 
+	//telNum("s");
+// while循环
+function whileTest()
+	{
+		document.writeln("while循环：<br>");
+		/*
+		while(循环条件)
+		{
+		  // 循环体
+		}
+		*/
+		// 输出0--9
+	var i = 0;
+		while(i < 10)
+			{
+				document.writeln(i + "<br>");
+				// 设置循环结束的条件
+				i++;
+			}
+		
+	}
+//whileTest();	
+function doWhileTest()
+	{
+		document.writeln("dowhile循环：<br>");
+		// 输出0--9
+	var i = 0;
+		do
+		{
+			document.writeln(i + "<br>");
+			// 设置循环结束的条件
+			i++;
+		}
+		while(i < 10);
+	}
+//doWhileTest();	
+
+// for循环
+function forTest()
+	{
+		document.writeln("for循环：<br>");
+		// 输出0--9
+		for(i = 0; i < 10; i++)
+			{
+			document.writeln(i + "<br>");
+		    }
+	}
+//forTest();
+// 输出数组中的所有元素
+function printArray()
+	{
+		document.writeln("数组元素：<br>");
+		// 定义一个数组
+		var arr = [12,23,4555,"sdfsdf","ewerwr"];
+		// 使用for循环输出数组的所有元素
+		for(i = 0; i < arr.length; i++)
+			{
+			document.writeln(arr[i] + "<br>");
+		    }
+	}
+//printArray();	
+// in for循环
+function printArrayByIn()
+	{
+		/*
+		for (变量 in 对象)
+		{
+		  循环体
+		}
+		*/
+		document.writeln("for in 数组元素：<br>");
+		// 定义一个数组
+		var arr = [12,23,4555,"sdfsdf","ewerwr"];
+		// ele ： 变量，数组的下标
+		// arr ： 数组名
+		for(ele in arr)
+			{
+			document.writeln(arr[ele] + "<br>");
+		}
+	}
+	printArrayByIn();
+</script>
+<meta charset="utf-8">
+<title>js语句</title>
+</head>
+
+<body>
+
+</body>
+</html>

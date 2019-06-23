@@ -1,0 +1,14 @@
+
+索引
+	用于提高搜索速度
+	
+	primary key					主键
+	unique						唯一约束
+	会自动添加一个索引
+	
+	语法：
+		create index 索引名
+		on 表名(字段名);
+		
+	删除：
+		drop index 索引名;

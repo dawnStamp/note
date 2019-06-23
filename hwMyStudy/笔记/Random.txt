@@ -1,0 +1,20 @@
+1.声明并创建一个生成随机数的对象
+	Random rd = new Random();
+
+2.引入包
+	import java.util.Random;
+
+3.定义一个变量来接受系统产生的随机数
+	int nums = rd.nextInt();
+
+4.
+	int nums = rd.nextInt(100);  			0-99
+	
+	取值1-100
+	int nums = rd.nextInt(100)+1;
+
+	取值64-128
+	int nums = rd.nextInt(65)+64;
+
+	总结规律可以得出一个公式
+	int nums = rd.nextInt(MAX-MIN+1)+MIN;

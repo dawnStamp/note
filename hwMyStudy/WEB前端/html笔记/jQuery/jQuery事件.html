@@ -1,0 +1,108 @@
+<!doctype html>
+<html>
+<head>
+<style type="text/css">
+	.divStyle{
+		border: 1px solid red;
+		display: none;
+	}
+	.trClass{
+		color: red;
+	}
+</style>
+<script type="text/javascript" src="js/jquery-1.12.4.js"></script>
+<script type="text/javascript">
+// 页面加载完成后要做的事情
+$(function(){
+	// 隐藏div，使用样式的方式隐藏
+	//$("#div1").addClass("divStyle");
+	// 使用函数的方式隐藏
+	$("#div1").hide();
+	// 给按钮绑定一个单击事件，点击时显示一个div   双击事件是“dblclick”
+	$("#showDivBtn").on("click",function(){
+		// 使用样式的方式显示
+		//$("#div1").removeClass("divStyle");
+		// 使用函数的方式显示div
+		// speed:三种预定速度之一的字符串("slow","normal", or "fast")或表示动画时长的毫秒数值(如：1000)
+		$("#div1").show("slow");
+	});
+	
+	// 隐藏div
+	$("#hiddenDivBtn").on("click",function(){
+		// 使用样式的方式隐藏
+		//$("#div1").addClass("divStyle");
+		// 使用函数的方式隐藏
+		// speed:三种预定速度之一的字符串("slow","normal", or "fast")或表示动画时长的毫秒数值(如：1000)
+		$("#div1").hide(3000);
+	});
+});
+// 测试toggle函数	
+function toggleTr()
+	{
+		// 第二行,切换隐藏或显示
+		// 用于绑定两个或多个事件处理器函数，以响应被选元素的轮流的 click 事件。
+        // 如果元素是可见的，切换为隐藏的；如果元素是隐藏的，切换为可见的。
+		//$("tr:eq(1)").toggle();
+		/*
+		$("tr:eq(1)").toggle("fast",
+		 function(){
+			alert("点击第2下");
+		});
+		*/
+		
+		// 切换样式
+		$("tr:eq(1)").toggleClass("trClass");
+	}
+</script>
+<meta charset="utf-8">
+<title>jQuery事件</title>
+</head>
+
+<body>
+<div id="div1" style="border: 1px solid red;width: 200px;height: 300px;">
+	div内容
+</div>
+<input id="showDivBtn" type="button" value="显示div" />
+<input id="hiddenDivBtn" type="button" value="隐藏div" /><br>
+<input type="button" onClick="toggleTr()" value="点击第一行" />
+<table border="1" cellspacing="0">
+ <tr>
+ 	<td>用户名</td>
+	<td>毕业学校</td>
+	<td>出生日期</td>
+	<td>籍贯</td>
+ </tr>
+	<tr>
+		<td>李四</td>
+		<td>北京大学</td>
+		<td>1997.12.1</td>
+		<td>江西南昌</td>
+	</tr>
+	<tr>
+		<td>张三</td>
+		<td>北京大学</td>
+		<td>1997.12.1</td>
+		<td>江西南昌</td>
+	</tr>
+	<tr>
+		<td>张三</td>
+		<td>北京大学</td>
+		<td>1997.12.1</td>
+		<td>江西南昌</td>
+	</tr>
+	<tr>
+		<td>张三</td>
+		<td>北京大学</td>
+		<td>1997.12.1</td>
+		<td>江西南昌</td>
+	</tr>
+	<tr>
+		<td>张三</td>
+		<td>北京大学</td>
+		<td>1997.12.1</td>
+		<td>江西南昌</td>
+	</tr>
+	
+</table>
+</body>
+</html>

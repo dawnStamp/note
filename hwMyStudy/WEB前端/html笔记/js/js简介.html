@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+<head>
+<!-- 引入外部定义的js -->
+	<script type="text/javascript" src="js/js.js" ></script>
+<meta charset="utf-8">
+<title>javascript简介</title>
+</head>
+
+<body>
+<!-- 在超链接中，使用javascript:前缀来运行代码 ，业务逻辑简单的场景下可以使用这种方式-->
+	<a href="javascript:alert('运行带有javascript前缀的方式')">运行js代码</a><br>
+<!-- 在 标签<script></script> 中写代码
+     在html页面中运行javascript代码时，必须要在标签<script></script>中
+     一般在定义js函数时，标签<script></script>要放在<head>标签中
+     如果要直接运行js代码，可以把标签<script></script>放在<body>标签中
+-->
+<script type="text/javascript">
+	alert("直接运行javascript代码");
+</script>
+
+   <!--href="javascript:void(0)"：超链接失效
+   onClick="myFirstJsFunction()"：点击事件，一点超链接，执行js代码
+     -->
+	<a href="javascript:void(0)" onClick="myFirstJsFunction()">调用外部的js</a>	
+</body>
+</html>

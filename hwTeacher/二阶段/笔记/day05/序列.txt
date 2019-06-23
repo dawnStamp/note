@@ -1,0 +1,7 @@
+
+
+
+create sequence 序列名 start with 数字 increment by 数字;
+
+	start with		控制序列从几开始
+	increment by	控制序列每一次加多少

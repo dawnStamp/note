@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style type="text/css">
+			.box{
+				height: 600px;
+				width: 600px;
+				border: 1px solid red;
+				margin: 0 auto;
+				font-weight:bold;
+				font-size: 60px;
+				font-family: "宋体";
+				line-height:600px;
+				color: red;
+				text-align: justify;
+				text-indent: 2em;
+				}
+				a{
+					text-decoration: none;
+				}
+		</style>
+	</head>
+	<body>
+		<!--边框 border
+			border: 10px red solid;(复合样式)
+			10px     border-width   边框的宽度
+			solid(实线)  border-style    边框样式
+			dashed（虚线）         dotted（点划线）
+			red   border-color    边框颜色
+			颜色有三种表现方式：
+			1、以颜色英文单词   red blue
+			2、以颜色的16进制数表示 #ffffff #545454
+			3、以颜色的rgb值表示
+				rgb(255,80,90)
+				rgba(255,80,90,0)  a是从零到一取值，不透明度。
+				 
+			border-bottom:20px solid red	 
+		-->
+		
+		<!--背景background（复合样式）
+			background-color ： 背景颜色
+			    	1、以颜色英文单词   red blue
+					2、以颜色的16进制数表示 #ffffff #545454
+					3、以颜色的rgb值表示
+						rgb(255,80,90)
+						rgba(255,80,90,0)  a是从零到一取值，不透明度。
+			
+			背景图片: background-image:url(图片的路径)
+			
+			background-repeat:repeat-x      在x轴平铺
+					      重复	  repeat-y      在y轴平铺
+							  no-repeat     不重复
+							  
+			background-position:x y
+						位置	
+			传数值：
+				x
+				正数   从容器的左边往右边走的距离
+				负数   从容器的左边往左边走的距离
+				
+				Y
+				正数   从容器的上边往下边走的距离
+				负数   从容器的上边往上边走的距离
+				
+			传关键字：
+			    X
+			     left    图片在容器左边
+			     right   图片在容器右边
+			     center  图片在容器水平方向居中
+			     
+			    Y
+			     top      图片在容器上边
+			     center   图片在容器竖直方向居中
+			     bottom   图片在容器下边
+			     
+			如果只传了一个值，那另一个值默认为center
+			如果两个值都没传，那默认在左上角0.0点
+			
+			
+			文字 font
+			
+			font-weight:         文字加粗
+						bold
+						bolder
+						normal
+						
+			font-style:          文字样式
+						italic(倾斜)
+						normal(默认)
+						
+			font-size:            文字大小
+						30px
+						
+			font-family:          文字字体
+						arial     英文字体
+						"微软雅黑"  中文字体
+			
+						"主要字体"，"备用字体1"，"备用字体2"
+			表示:如果用户电脑上有主要字体，则显示主要字体，如果没有，则显示备用字体，如果还没有，就接着显示下一个。
+				
+				英文字体，"中文字体"：当遇到英文字符时使用英文字体，当遇到中文字符时使用中文字体
+				
+			line-height:			行高（行间距）
+						30px
+						
+			如何让文字在盒子竖直方向居中？
+			                    让文字的行高=盒子的高度
+			                    
+			                    
+			文本  text 
+			1、文本颜色：  color
+			2、文本对齐：  text-align：
+									center    水平居中
+									left	    左对齐
+									right	    右对齐
+									justify	    两端对齐，最后一行左对齐
+			
+			3、文本缩进： text-indent：
+									 1、30px
+									 2、2em(一个em就是一个字的大小)
+									 
+			4、文本修饰：text-decoration:
+										none          无
+										underline     下划线
+										line-through  中划线
+		-->
+		<div class="box">熬多久</div>
+		<a href="index.html">百度一下</a>
+	</body>
+</html>

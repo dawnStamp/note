@@ -1,0 +1,92 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>js字符串</title>
+</head>
+
+<body>
+<script type="text/javascript">
+	// 定义一个字符串
+	var userName = "helloWord!世界";
+	// 字符串长度，一个字符就是一位长度，空格也会占一个长度 （常用，熟练掌握）
+	var userNameLength = userName.length;
+	document.writeln("字符串长度：" + userNameLength + "<br>");
+	// charAt(2) : 查找字符串中某个索引出的字符，从0开始
+	document.write("charAt:" + userName.charAt(11) + "<br>" );
+	// toUpperCase():将字符串中的字母转成大写（常用，熟练掌握）
+	document.writeln("toUpperCase:" + userName.toUpperCase() + "<br>");
+	// toLowerCase():将字符串中的字母转成小写（常用，熟练掌握）
+	document.writeln("toLowerCase:" + userName.toLowerCase() + "<br>");
+	// indexOf("") : 某个字符第一次出现的下标位置,区分大小写，如果不存在，返回-1
+	document.writeln(userName.indexOf("word") + "<br>");
+	// substring(start,stop):截取两个参数之间的字符串，包含第一个参数，不包含第二个参数（常用，熟练掌握）
+	document.writeln(userName.substring(3,7) + "<br>");
+	// substr(start,length):截取字符串，从start开始，截取length个长度,包含start,start可以是负数
+	document.writeln(userName.substr(-2,3) + "<br>");
+	// replace(old,new):替换
+	document.writeln(userName.replace("h","K") + "<br>");
+	// 判断数字,返回false：是数字，返回true：不是数字（常用，熟练掌握）
+	document.writeln("123是否为数字：" + isNaN("123") + "<br>");
+	document.writeln("abc是否为数字：" + isNaN("abc") + "<br>");
+	document.writeln("abc123是否为数字：" + isNaN("abc123") + "<br>");
+	// 最大数
+	document.writeln("Number最大数：" + Number.MAX_VALUE + "<br>");
+	// 不知道的一个数字
+	document.writeln("Number的NaN：" + Number.NaN + "<br>");
+	// 保留小数位，四舍五入
+	var num1 = 12.346242;
+	document.writeln("保留2位小数：" + num1.toFixed(2) + "<br>");
+	// 当前日期
+	var curDate = new Date();
+	// 月中的某一 天
+	var day = curDate.getDate();
+	// 某一月 (0 ~ 11) ，当前月要加1
+	var month = curDate.getMonth();
+	// 年
+	var year = curDate.getFullYear();
+	document.writeln("当前日期：" + year + "-" + (month+1) + "-" + day + "<br>");
+	// 数学中的常见常量
+	document.writeln("数学常量e：" + Math.E + "<br>");
+	document.writeln("数学常量pi：" + Math.PI + "<br>");
+	// 绝对值
+	document.writeln("绝对值：" + Math.abs(-12) + "<br>");
+	// 往上舍入，适用一些特殊行业
+	document.writeln("绝对值：" + Math.ceil(12.00000000001) + "<br>");
+	// 最大值
+	document.writeln("最大值：" + Math.max(100,39) + "<br>");
+	// 最小值
+	document.writeln("最大值：" + Math.min(100,39) + "<br>");
+	// 随机数 范围是 0 到 1
+	document.writeln("最大值：" + Math.random() + "<br>");
+	// 取0 - 10 之间的随机数
+	var rand = Math.random();
+	rand = rand * 100;
+	// 随机数
+	document.writeln("0-10之间的随机数：" + parseInt(rand) + "<br>");
+	
+	// 数组  直接赋值
+	var arr1 = [1,23,33,34];
+	var arr11 = ["qwe","asd"];
+	// 数组也可以当成数组中的一个元素
+	arr1[4] = arr11;
+	// 用下标取数组中的元素，从0 开始
+	document.writeln(arr1[3] + ",数组长度： " + arr1.length + "<br>");
+	// 数组中不存在越界的问题
+	document.writeln(arr1[5] + ",数组长度： " + arr1.length + "<br>");
+	// 给数组中元素赋值，可以越过其中的元素，直接给后面的元素赋值
+	arr1[6] = "abc";
+	document.writeln(arr1[4] + "," +arr1[6] + ",数组长度： " + arr1.length + "<br>");
+	
+	// 数组的第二种定义方式
+	var arr2 = [];
+	arr2[0] = "123";
+	document.writeln(arr2[0] + ",数组长度： " + arr2.length + "<br>");
+	
+	// 第三种定义数组的方式 面向对象
+	var arr3 = new Array();
+	arr3[0] = "zxc";
+	document.writeln(arr3[0] + ",数组长度： " + arr3.length + "<br>");
+</script>
+</body>
+</html>

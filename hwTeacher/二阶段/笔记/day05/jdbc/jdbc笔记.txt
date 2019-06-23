@@ -1,0 +1,37 @@
+
+JDBC(Java Database Connectivity)
+ODBC(Open Database Connectivity)
+
+	ODBC:
+		一个以C语言为基础去访问sql为基础的数据库的一个接口。
+		它提供了用于和数据库沟通以及访问数据的接口。
+		
+	JDBC:
+		Java版本的ODBC
+		1996年由sun公司提出
+		
+	使用JDBC的目的：
+		1.与数据库建立连接
+		2.发送sql语句到数据库端并执行
+		3.处理返回的执行结果
+		
+三种Statement:
+	1.Statement
+		执行不带参数的简单sql语句
+		容易被sql注入攻击，sql注入为：在String类型的sql语句后面拼接or 1=1
+		
+	2.PreparedStatement
+		执行带参数或不带参数的sql语句
+		占位符?
+		
+	3.CallableStatement
+		执行对数据库已存储的pl/sql程序的调用
+		
+简单工厂模式
+
+
+批处理
+		
+		
+三层：
+	Controller

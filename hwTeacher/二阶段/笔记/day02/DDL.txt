@@ -1,0 +1,68 @@
+
+DDL语句：
+	oracle中，不区分大小写，默认大写，可以写成一行或多行。
+	
+	create建表语句
+		语法：
+			create table 表名(
+			列名1 数据类型(大小),
+			列名2 数据类型(大小)
+			)
+			
+	建表时添加约束：
+		create table stu(
+		id varchar2(255) constraint aaaaa primary key,
+		name varchar2(255) constraint bbbbb unique,
+		age number default 10 constraint ccccc not null,
+		sex number(1) constraint ddddd check(sex<10),
+		tea_id varchar2(10) constraint eeeee references teacher(id)
+		)
+	
+	约束的命名：
+		1.不命名约束，oracle会自动产生特定名字的约束名，名字以sys_为前缀
+		2.命名约束的关键字为：constraint
+	
+	drop删除表	
+		语法：
+			drop table 表名;
+			
+	alert修改表结构
+		语法：
+			alter table 表名 ...
+			
+		新增列：
+			alter table 表名 add 列名 数据类型(大小);
+			
+		删除列：
+			alter table 表名 drop column 列名;
+			
+		修改列名称：
+			alter table 表名 rename column 旧列名 to 新列名;
+			
+		修改表名称：
+			alter table 旧表名 rename to 新表名;
+			
+		修改列类型：
+			alter table 表名 modify 列名 数据类型(大小);
+			
+		建表之后添加约束：
+			主键约束：
+				alter table 表名 add constraint 约束名 primary key(列名);
+			检查约束：
+				alter table 表名 add check(条件);
+			非空约束：
+				alter table 表名 modify 列名 not null;
+			唯一约束：
+				alter table 表名 add unique(列名);
+			外键约束：
+				alter table 子表名 add foreign key(子表列名) references 父表名(父表列名);
+				
+		truncate
+			语法：
+				truncate table 表名;
+			
+			作用：
+				1.清空所有表数据
+				2.释放表空间
+				3.不能回滚
+		

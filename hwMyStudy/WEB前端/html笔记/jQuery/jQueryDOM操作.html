@@ -1,0 +1,105 @@
+<!doctype html>
+<html>
+<head>
+<script type="text/javascript" src="js/jquery-1.12.4.js"></script>
+<script type="text/javascript">
+$(function(){
+	// 获取最后一个input的type属性值
+	var attrType = $("input:last").attr("type");
+	// 设置最后一个input的value值
+	//$("input:last").attr("value","重新设置按钮的值");
+	//alert(attrType);
+	// 选中最后一个复选框
+	//$("input[type='checkbox']").last().attr("checked","checked");
+	$("input[type='checkbox']").last().prop("checked","checked");
+	// 删掉第一个checkbox的name属性
+	$("input[type='checkbox']:first").removeAttr("name");
+	// 从bdoy中查找input元素
+	var allInput = $("form").find("input");
+	//alert(allInput.size());
+	// 最后一个type为checkbox的input的父级就是form
+	$("input[type='checkbox']").last().parent();
+	// 最后一个type为checkbox的input的父级的父级的子集，就是form和input
+	$("input[type='checkbox']").last().parent().parent().children();
+});	
+function checkInput()
+	{
+		// 复选框中选中的元素,匹配所有选中的被选中元素(复选框、单选框等，不包括select中的option)
+		var selecteds = $("input:checked");
+		alert(selecteds.size());
+	}
+// 向span中添加内容
+function addSpan()
+	{
+		$("#spanText").append("美国总统");
+	}
+// 往表格后面添加数据
+function addDataToTable()
+	{
+		// 设置tr和td的数据
+		var trData = "<tr><td>李四</td><td>南京大学</td><td>1987.12.2</td><td>四川成都</td></tr>";
+		// 将新设置的数据添加到表格的最后一行
+		$("tr:last").after($(trData));
+	}
+// 删除表格的最后一行
+function delLastTr()
+	{
+		$("tr:last").remove();
+	}
+</script>
+<meta charset="utf-8">
+<title>jQueryDOM操作</title>
+</head>
+
+<body>
+<form>
+  <input type="checkbox" name="newsletter"  value="Daily" />中国
+  <input type="checkbox" name="newsletter" value="Weekly" />日本
+  <input type="checkbox" name="newsletter"  value="Monthly" />韩国
+</form>
+<input type="button" onClick="checkInput()" value="选中的" /><br>
+<span id="spanText">你好，</span><br>
+<input type="button" onClick="addSpan()" value="添加内容" /><br>
+<input type="button" onClick="addDataToTable()" value="添加表格内容" />
+<input type="button" onClick="delLastTr()" value="删除表格内容" /><br>
+<table border="1" cellspacing="0">
+ <thead>
+ 	<td>用户名</td>
+	<td>毕业学校</td>
+	<td>出生日期</td>
+	<td>籍贯</td>
+ </thead>
+	<tr>
+		<td>张三</td>
+		<td>北京大学</td>
+		<td>1997.12.1</td>
+		<td>江西南昌</td>
+	</tr>
+	<tr>
+		<td>张三</td>
+		<td>北京大学</td>
+		<td>1997.12.1</td>
+		<td>江西南昌</td>
+	</tr>
+	<tr>
+		<td>张三</td>
+		<td>北京大学</td>
+		<td>1997.12.1</td>
+		<td>江西南昌</td>
+	</tr>
+	<tr>
+		<td>张三</td>
+		<td>北京大学</td>
+		<td>1997.12.1</td>
+		<td>江西南昌</td>
+	</tr>
+	<tr>
+		<td>张三</td>
+		<td>北京大学</td>
+		<td>1997.12.1</td>
+		<td>江西南昌</td>
+	</tr>
+	
+</table>
+</body>
+</html>

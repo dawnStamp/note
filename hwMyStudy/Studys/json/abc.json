@@ -1,0 +1,34 @@
+{
+	"cat": "miao",
+	"dog": "wang",
+	"bird": "zhi",
+	"tigger": "2.22",
+	"char": true,
+	"pig": {
+		"name": "peiqi",
+		"color": "pink"
+	},
+	"animal": [
+		1,
+		2,
+		3,
+		4
+	],
+	"box": [
+		{
+			"id": 1,
+			"name": "cat",
+			"age": 2
+		},
+		{
+			"id": 2,
+			"name": "dog",
+			"age": 1
+		},
+		{
+			"id": 3,
+			"name": "pig",
+			"age": 3
+		}
+	]
+}

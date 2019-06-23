@@ -1,0 +1,111 @@
+
+流程控制
+	分为三种基本结构
+		1.顺序结构
+			代码默认按顺序依次执行，是最常见的结构。
+			
+		2.分支结构
+			根据条件的值选择不同的执行流程，可以得到不同的结果。
+			包括：
+				(1)单分支语句(if-else语句)
+				(2)多分支语句(switch语句)
+		
+		3.循环结构
+			对于一些需要重复执行的语句，用户指定条件或者次数，由机器自动识别执行。
+			包括：
+				(1)次数循环语句(for语句)
+				(2)条件循环语句(while语句)
+		
+		语法：
+			1.if-else语句
+				if(条件){
+					代码1
+				}else{
+					代码2
+				}
+			
+			2.switch语句
+				switch(值){
+					case 1:
+						...
+						break;
+					case 2:
+						...
+						break;
+					case 3:
+						...
+						break;
+					default:
+						...
+				}
+			
+			3.for(初始化表达式;测试表达式;步长){
+				...
+				需要循环的内容
+			}
+			(1)首先执行初始化表达式
+			(2)然后计算测试表达式，如果表达式的值为true:继续执行。值为false:退出循环
+			(3)最后执行步长
+
+			
+			4.while(布尔表达式){
+				需要循环的内容
+			}
+			当布尔表达式为true时，执行代码，否则跳出循环(为false时跳出循环)
+			
+			5.do-while
+				先执行语句，然后再判断布尔表达式
+				与while的不同在于，do中的代码至少会执行一次
+				do{
+					代码
+				}while(布尔表达式);
+			
+break和continue
+	break
+		终止循环体中的代码
+	continue
+		终止当前循环，执行下一次循环
+			
+	break和continue的区别
+		1.break
+			终止循环，不论还有多少次循环没有完成，都会立即终止
+		2.continue
+			终止当前循环，后面该继续循环，就会继续循环。
+
+loop
+	格式：
+		和continue配合使用，下一次循环从指定位置开始
+		loop
+		
+		continue loop;
+
+
+			
+Scanner		输入的内容带入到代码中
+		1.导包
+			import java.util.Scanner;
+		2.写代码
+			Scanner sc = new Scanner(System.in);
+			int num = sc.nextInt();
+			
+Random		产生随机数
+		1.导包
+		2.Random rd = new Random();
+		
+		取值0-99
+		int rdNum = rd.nextInt(100);
+
+		取值1-100
+		int rdNum = rd.nextInt(100)+1;
+		
+		取值64-128
+		int rdNum = rd.nextInt(65)+64;
+		
+		总结规律得出公式：
+			int rdNum = rd.nextInt(MAX-MIN+1)+MIN;
+			
+			588-2988
+
+
+
+

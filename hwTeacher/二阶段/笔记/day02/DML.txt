@@ -1,0 +1,30 @@
+
+DML
+
+	insert语句：
+		新增记录
+		语法：
+			insert into 表名(列名..) values(值..);
+			ps:
+				列和值的个数以及类型要一致
+				
+			insert into 表名 values(值);
+			ps:
+				表中有多少列，values中就要有多少个值
+				
+			insert into 表名 查询语句;
+			ps:
+				1.一次插入多行记录
+				2.列名和插入值的顺序、类型和数量要求一致
+		
+	update语句：
+		修改记录
+		语法：
+			update 表名 set 列名=值,列名=值... where 条件;
+			
+	delete语句：
+		删除记录
+		语法：
+			delete from 表名 where 条件;
+			
+	增删改查

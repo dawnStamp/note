@@ -1,0 +1,1 @@
+create sequence t_emp_id_seq start with Êý×Ö increment by Êý×Ö;

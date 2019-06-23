@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>css样式基本使用</title>
+<style type="text/css" >
+/*使用import引入外部文件*/	
+/**@import url("css/css.css");*/
+	/* 内嵌样式
+	   直接对html标签修改样式
+	*/
+	h1{
+		color: red;
+		font-size: 100px;
+		text-decoration: underline;
+	}
+	span{
+	    font-size: 100px;
+	}
+	
+</style>
+<!-- 使用link标签引入外部文件-->
+<link rel="stylesheet" href="css/css.css" />
+
+</head>
+
+<body>
+<!-- 注释 -->
+<h1>标题一</h1>
+<!-- 内联样式，直接在html标签中使用style属性 
+     样式名称:样式值;样式名称1:样式值;
+-->
+<h2 style="color:red;font-size: 150px;">标题2</h2>
+<span style="color: aqua;font-size: 10px;">这是一个span标签</span>
+<div>
+	这是一个div
+</div>
+</body>
+</html>

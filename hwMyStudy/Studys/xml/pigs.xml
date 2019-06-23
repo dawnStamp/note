@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- XML中要求一个对根节点 -->
+<pigs>
+	<pig id="1" name="猪">
+		<name>佩奇</name>
+		<age>7</age>
+
+
+	</pig>
+	<pig id="2" name="小猪">
+		<name>乔治</name>
+		<age>6</age>
+
+	</pig>
+</pigs>

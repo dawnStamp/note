@@ -1,0 +1,129 @@
+<!doctype html>
+<html>
+<head>
+<script type="text/javascript">
+// 验证表单
+function valForm()
+	{
+		// 获取用户名，在form中获取输入框的值，可以使用 "form的name.输入框的name"
+		var userName = myForm.userNameInput.value;
+		// 规则：用户名的长度必须是6-12位
+		if (userName.length < 6 || userName.length > 12)
+			{
+				//alert("用户名的长度必须在6到12位之间，请检查！");
+				// 显示提示内容，通过样式来控制，让提示内容显示，颜色为红色
+				document.getElementById("showErrorUserName").style="display:inline;color:red;";
+				// 改变输入框的颜色
+				myForm.userNameInput.style="border-color:red;";
+				// 焦点停留在用户名的输入框
+				myForm.userNameInput.focus();
+				// 跳出代码，不能往下走
+				return false;
+			}
+		else
+			{
+				// 重置颜色
+				myForm.userNameInput.style="";
+				// 隐藏提示内容
+				document.getElementById("showErrorUserName").style="display:none;";
+			}
+		
+		// 密码验证
+		var pwd = myForm.pwdInput.value;
+		//alert("输入的密码：" + pwd);
+		// 规则：用户名的长度必须是6-12位
+		if (pwd.length < 6 || pwd.length > 12)
+			{
+				//alert("用户名的长度必须在6到12位之间，请检查！");
+				// 显示提示内容，通过样式来控制，让提示内容显示，颜色为红色
+				document.getElementById("showErrorPwd").style="display:inline;color:red;";
+				// 改变输入框的颜色
+				myForm.pwdInput.style="border-color:red;";
+				// 焦点停留在用户名的输入框
+				myForm.pwdInput.focus();
+				// 跳出代码，不能往下走
+				return false;
+			}
+		else
+			{
+				// 重置颜色
+				myForm.pwdInput.style="";
+				// 隐藏提示内容
+				document.getElementById("showErrorPwd").style="display:none;";
+			}
+		// 毕业学校，从下拉框选择数据
+		var xuexiao = myForm.school.value;
+		//alert(xuexiao);
+		// 判断是否选择了学校
+		if (xuexiao == "blank")
+			{
+				alert("请选择毕业学校");
+				return false;
+			}
+	// 性别，从单选按钮中选择
+	var xingbie = myForm.sex.value;
+	//alert("性别为：" + xingbie);
+		if (xingbie == null || xingbie == "" || xingbie == "undefind")
+			{
+				alert("请选择性别");
+				return false;
+			}
+	// 爱好，获取爱好的input元素，这是一个列表
+	var aihaoEles = myForm.aihao;
+	// 被选中的爱好
+	var aihaoChecked = "";	
+	// 循环列表，判断被选中的复选框，要根据复选框的checked属性来判断，"true"被选中，"false"没被选中，
+	//  value属性来获取被选中的值
+	for (i = 0; i < aihaoEles.length; i++)
+		 {
+		// 拿到一个复选框的元素	 
+		var aihaoEle = aihaoEles[i];
+		// 判断是否被选中
+		if (aihaoEle.checked)
+			{
+				// 多个爱好之间使用“,”隔开
+				aihaoChecked += aihaoEle.value + ",";
+			}
+			 
+	}
+	// 没有选择爱好	
+	if (aihaoChecked == "")
+		{
+			alert("请选择爱好");
+			return false;
+		}
+		else
+			{
+				alert("爱好：" + aihaoChecked);
+			}
+	
+	// 改变form中action的处理地址
+	myForm.action = "jsDom.html";
+	// 提交表单
+	myForm.submit();	
+	}
+	
+</script>
+<meta charset="utf-8">
+<title>jsform表单</title>
+</head>
+
+<body>
+<!-- # 代表本页，action的值可以动态设置 -->
+<form name="myForm" action="#" method="post" >
+    <!-- 长度6-12位 -->
+	用户名：<input type="text" name="userNameInput" /><span id="showErrorUserName" style="display: none;">用户名的长度必须在6到12位之间，请检查！</span><br>
+	<!-- 长度6-12位 -->
+	密码：<input type="password" name="pwdInput" /><span id="showErrorPwd" style="display: none;">密码的长度必须在6到12位之间，请检查！</span><br>
+	毕业学校：<select name="school">
+		<option value="blank">请选择毕业学校</option>
+		<option value="清华大学">清华大学</option>
+		<option value="北京大学">北京大学</option>
+		<option value="南昌大学">南昌大学</option>
+	</select><br>
+	性别：<input type="radio" name="sex" value="男" > 男<input type="radio" name="sex" value="女" > 女 <br>
+	爱好：<input type="checkbox" name="aihao" value="游戏" >游戏 <input type="checkbox" name="aihao" value="写代码" >写代码 <input type="checkbox" name="aihao" value="旅游" >旅游 <br>
+	<input type="button" value="注册" onClick="valForm()" />
+</form>
+</body>
+</html>

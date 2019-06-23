@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+<head>
+<script type="text/javascript">
+	//定义一个函数，双击调用
+	function dbtest(){
+		//alert("按钮被双击了");
+		alert("通过代码绑定双击事件,页面加载完成后执行");
+	}
+	
+	//键盘按下时触发事件，执行函数
+	function onkeydownTest(){
+		//alert("按下键盘");
+	}
+	
+	//页面加载完成后，要执行的代码
+	function initPage(){
+		//执行绑定事件，直接写函数名(不常用)
+		document.getElementById("dbButton").ondblclick=dbtest;
+	}
+	
+	//选择事件
+	function onselectTest(){
+		alert("选择事件触发");
+	}
+	
+	//失去焦点事件
+	function onBlurTest(){
+		alert("失去焦点");
+	}
+	
+	//内容发生变化时触发事件
+	function onchangeTest(){
+		alert("选择的内容发生变化");
+	}
+	
+	</script>
+
+<meta charset="utf-8">
+<title>js事件</title>
+</head>
+
+<body onLoad="initPage()">
+<input id="dbButton" type="button" value="双击按钮" /><br>
+<script type="text/javascript">
+	//执行绑定事件，直接写函数名(不常用)
+	//document.getElementById("dbButton").ondblclick=dbtest;
+	</script>
+用户名：<input type="text" name="username" onKeyDown="onkeydownTest()" onSelect="onselectTest()" onBlur="onBlurTest()" /><br>
+学校：<select name="school" onChange="onchangeTest()">
+	<option>南昌大学</option>
+	<option>北京大学</option>
+	<option>清华大学</option>
+</select>
+</body>
+</html>
