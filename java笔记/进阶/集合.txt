@@ -1,0 +1,33 @@
+集合的体系结构：
+        由于不同的数据结构（数据的组织，存储方式），所以java为我们提供了不同的集合
+        但是不同的集合他们的功能都是相似，不断的向上提取，将共性抽取出来，这就是集合体系结构形成的原因
+ 
+    体系结构
+        从最顶层开始，因为最顶层包含了所有的共性
+        使用最底层，因为最底层就是具体的实现
+ 
+  Collection
+  List
+  ArrayList
+  
+Collection
+        boolean add(E e) :确保此集合包含指定的元素（可选操作）。
+        void clear() :从此集合中删除所有元素（可选操作）。
+        boolean contains(Object o) :如果此集合包含指定的元素，则返回 true 。
+        boolean isEmpty() :如果此集合不包含元素，则返回 true 。
+        boolean remove(Object o) :从该集合中删除指定元素的单个实例（如果存在）（可选操作）。
+        int size() :返回此集合中的元素数。
+        Object[] toArray() :返回一个包含此集合中所有元素的数组。
+		
+		
+迭代器
+           Iterator<E> iterator() :返回此集合中的元素的迭代器。
+           E next() :返回迭代中的下一个元素。
+           boolean hasNext() :如果迭代具有更多元素，则返回 true 。
+ 
+       集合的遍历方式：
+               1.toArray(),可以把集合转换成数组，然后遍历数组即可
+               2.iterator(),可以放会一个迭代器对象，我们可以通过迭代器对象来迭代集合
+ 
+  注意：Exception in thread "main" java.util.NoSuchElementException
+       使用next()方法获取下一个元素，如果没有元素可以获取，则出现NoSuchElementException报错		

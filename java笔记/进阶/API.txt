@@ -98,4 +98,5 @@ Date:表示特定的瞬间，精确到毫秒，可以通过方法来设定自己
   构造方法：
        Integer(int value)
        Integer(String s)
-  
+正则表达式：就是一套规则，可以用于匹配字符串
+    boolean matches(String regex)  判断当前字符串是否匹配指定的正则表达式，如果匹配则返回true，否则返回false
