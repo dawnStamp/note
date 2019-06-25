@@ -30,4 +30,96 @@ Collection
                2.iterator(),可以放会一个迭代器对象，我们可以通过迭代器对象来迭代集合
  
   注意：Exception in thread "main" java.util.NoSuchElementException
-       使用next()方法获取下一个元素，如果没有元素可以获取，则出现NoSuchElementException报错		
+       使用next()方法获取下一个元素，如果没有元素可以获取，则出现NoSuchElementException报错
+
+Exception in thread "main" java.util.ConcurrentModificationException 并发修改异常
+       迭代器是依赖集合的，相当于集合的一个副本，当迭代器在操作的时候，如果发现和集合不一样，则抛出异常
+       解决方案：
+           在使用迭代器进行遍历的时候，使用迭代器来进行修改	   
+
+泛型		   
+ 由于集合可以存储任意类型的对象，当我们存储了不同类型的对象，就有可能在转换的时候出现类型转换异常，
+   所以java为了解决这个问题，给我们提供了一种机制，叫做泛型
+ 
+ 
+  泛型：是一种广泛的类型，把明确数据数据类型的工作提前到来编译时期，借鉴了数组的特点
+  泛型的好处：
+           避免了类型转换的问题
+           可以简化代码的书写
+ 
+  泛型的使用：
+           当有<>，就可以使用泛型了		
+
+
+foreach循环：增强for循环 一般用来遍历集合或者数组
+       格式（idea快捷键为iter,建议修改成fore）：
+           for(元素的类型变量 ： 集合或者数组对象){
+               可以直接使用变量;
+           }
+       
+   注意：在foreach循环中不能修改集合，否则会出现并发修改异常。因为foreach底层是迭代器
+
+
+数组的特点点：查询快，增删慢
+		   
+链表：由链子连接起来的一堆结点
+结点：地址值，值，下一个结点地址值
+链表的特点：查询慢，增删快
+
+栈：先进后出（类似子弹夹）
+队列：先进先出
+
+
+List:
+               有序的（存储和读取的顺序是一样的）
+               有整数索引
+               允许重复的
+ 
+   List的特有功能：
+               void add(int index,E element) 在指定索引位置添加指定元素
+               E get(int index) 根据索引返回元素
+               E remove(int index) 删除指定元素并返回
+               E set(int index,E element) 将指定索引位置上的元素替换为指定元素，并将原先的元素返回
+			   
+ list的常用子类：
+                   ArrayList
+                       底层是数组结构，查询快，增删慢
+                   LinkedList
+                       底层是链表结构，查询慢，增删快
+ 
+  选择使用不同的集合
+           如果查询多，增删少，则使用ArrayList
+           如果查询少，增删多，则使用LinkedList
+ 
+  LinkedList的特有功能：
+               void addFirst(E e)
+               void addList(E e)
+               E getFirst()
+               E getLast()
+               E removeFirst()
+               E removeLast()
+
+Set集合的特点：
+           无序（存储和读取的顺序有可能不一样）
+           不允许重复（要求元素唯一）
+           没有索引	
+		
+	hashSet的add（）方法，首先会使用当前集合中的每一个元素和新添加的元素进行比较，
+       如果hash值不一样，则直接添加新的元素
+       如果hash值一样，比较地址值或者使用equals方法进行比较
+       比较结果一样，则认为是重复不添加
+       所有的比较结果都不一样则添加
+		   
+		   
+Collections
+       面试题：Collection和Collections有什么区别
+           Collection是集合体系的最顶层，包含了集合体系的共性
+           Collections是一个工具类，方法用于操作Collection
+ 
+     static int binarySearch(List list,Object key) : 使用二分查找法查找指定元素在指定列表的索引位置
+     static void copy(List dest,List src) :是把源列表中的数据覆盖到目标列表（注意：目标列表的长度至少等于源列表的长度）
+     static void fill(List list,Object obj) :使用指定的对象填充指定列表的所有元素
+     static void reverse(List list) :反转
+     static void shuffle(List list): 随机置换
+     static void sort(List<T> list) : 按照列表中元素的自然顺序排序
+     static void swap（List list，int i，int j） :将指定列表中的两个索引进行位置互换
