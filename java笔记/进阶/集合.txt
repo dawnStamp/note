@@ -123,3 +123,51 @@ Collections
      static void shuffle(List list): 随机置换
      static void sort(List<T> list) : 按照列表中元素的自然顺序排序
      static void swap（List list，int i，int j） :将指定列表中的两个索引进行位置互换
+
+
+
+Map:将键映射到值的对象。一个映射不能包含重复的键：每个键最多只能映射到一个值
+ 
+   map与Collection的区别：
+           Map:是一个双列集合，常用于处理有相应关系的数据，key是不可以重复的，我们也称为夫妻对集合
+           collection:是单列集合，collection有不同的子体系，有的允许重复有索引有序，有的不允许重复且无序，那么我们也称之为单生汉集合
+ 
+   一对一：一个学号对应一个姓名
+ 
+ 
+   map的常用功能：
+           映射功能:
+           V put(K key, V value) :将指定的值与该映射中的指定键相关联（可选操作）。
+           获取功能:
+           V get(Object key) :返回到指定键所映射的值，或 null如果此映射包含该键的映射。
+           Set<K> keySet() :返回此地图中包含的键的Set视图。
+           Collection<V> values() :返回此地图中包含的值的Collection视图。
+           int size() :返回此地图中键值映射的数量。
+           判断功能:
+           boolean containsKey(Object key) :如果此映射包含指定键的映射，则返回 true 。
+           boolean containsValue(Object value) :如果此地图将一个或多个键映射到指定的值，则返回 true 。
+           boolean isEmpty() :如果此地图不包含键值映射，则返回 true 。
+           删除功能:
+           void clear() :从该地图中删除所有的映射（可选操作）。
+           V remove(Object key) :如果存在（从可选的操作），从该地图中删除一个键的映射。
+ 
+           遍历功能：
+           Set<Map.Entry<K,V>> entrySet() :返回此地图中包含的映射的Set视图。
+ 
+    Map的第一种遍历方式：
+           首先召集所有的丈夫
+           遍历所有的丈夫
+           获取每一个丈夫
+           让每一个丈夫去找他自己的妻子
+		   
+	Map的第二种遍历方式：
+               通过结婚证对象来获取丈夫和媳妇
+ 
+        class Entry<k,v>{
+            k Key;
+            v Value;
+        }
+ 
+        遍历功能：
+            Set<Map.Entry<K,V>> entrySet() :返回此地图中包含的映射的Set视图。	   
+		   
