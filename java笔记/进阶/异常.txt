@@ -36,3 +36,22 @@
     Jvm处理异常的方式：
            如果出现异常我们没有处理，jvm会帮我们进行处理，他会把字长的类型，原因还有位置显示在命令行
            并且还终止了程序，异常后面的代码将不再执行
+		   
+	处理多个异常
+       可以使用多个try...catch
+       使用一个try和多个catch
+ 
+   多个catch之间的顺序：
+          多个catch之间可以有子父类
+          平级或者同级之间没有顺序关系
+          如果有子父类，父类异常必须放在后面	
+
+Throwable的常用方法
+               String getMessage() :返回此throwable的详细消息字符串。
+               String toString()  : 返回此可抛出的简短描述。
+               void printStackTrace() :将此throwable和其追溯打印到标准错误流。
+
+
+finally:组合try...catch来使用，用于释放资源等收尾工作，无论try...catch是否执行，finally一定会执行		  
+		  
+		   
