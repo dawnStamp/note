@@ -1,4 +1,7 @@
-﻿输出流：FileWriter		写
+﻿						
+									IO流基础
+
+输出流：FileWriter		写
 输入流：FileReader		读
 
 往文件中写数据
@@ -47,3 +50,79 @@ void write(char[] chs,int index,int len):写一个字符数组的一部分数据
            void newLine():写一个换行符，这个换行符由系统决定
   BufferedReader
            String readLine():一次读取一行数据，但是不读取换行符
+		   
+		   
+		   
+											
+											
+											
+											
+											
+											IO流进阶
+											
+File:文件和目录路径名的抽象表示形式 file类的实例是不可变的
+ 
+  构造方法：
+       File(File parent, String child) :从父抽象路径名和子路径名字符串创建新的 File实例。
+       File(String pathname) :通过将给定的路径名字符串转换为抽象路径名来创建新的 File实例。
+       File(String parent, String child) :从父路径名字符串和子路径名字符串创建新的 File实例。
+ 
+ 
+   File的常用功能：
+           创建功能:
+               boolean createNewFile():当且仅当具有该名称的文件尚不存在时，原子地创建一个由该抽象路径名命名的新的空文件。
+               boolean mkdir() :创建由此抽象路径名命名的目录。
+               boolean mkdirs() :创建由此抽象路径名命名的目录，包括任何必需但不存在的父目录。
+ 
+           删除功能:
+               boolean delete():删除由此抽象路径名表示的文件或目录。
+			   
+			  注意：删除一个文件夹，这个文件夹下面不能有其他的文件和文件夹
+ 
+           获取功能:
+               File getAbsoluteFile():返回此抽象路径名的绝对形式。
+               String getAbsolutePath() :返回此抽象路径名的绝对路径名字符串。
+               String getName() :返回由此抽象路径名表示的文件或目录的名称。
+               String getParent() :返回此抽象路径名的父 null的路径名字符串，如果此路径名未命名为父目录，则返回null。
+               File getParentFile() :返回此抽象路径名的父，或抽象路径名 null如果此路径名没有指定父目录。
+               String getPath() :将此抽象路径名转换为路径名字符串。
+               long lastModified() :返回此抽象路径名表示的文件上次修改的时间。
+               long length() :返回由此抽象路径名表示的文件的长度。
+
+           判断功能:
+               boolean exists() :测试此抽象路径名表示的文件或目录是否存在。
+               boolean isAbsolute() :测试这个抽象路径名是否是绝对的。
+               boolean isDirectory() :测试此抽象路径名表示的文件是否为目录。
+               boolean isFile() :测试此抽象路径名表示的文件是否为普通文件。
+               boolean isHidden() :测试此抽象路径名命名的文件是否为隐藏文件。
+ 
+           修改文件名:
+               boolean renameTo(File dest) :重命名由此抽象路径名表示的文件。											
+
+
+		绝对路径：固定不可改变的路径，以盘符开头
+		相对路径：相对于某个参照物，不能以盘符开头											
+		   
+File类的重要获取功能:
+               String[] list() :返回一个字符串数组，命名由此抽象路径名表示的目录中的文件和目录。
+					注意*：只有指向文件夹的File对象才可以调用该方法
+			   
+               File[] listFiles() :返回一个抽象路径名数组，表示由该抽象路径名表示的目录中的文件。
+               static File[] listRoots() :列出可用的文件系统根。		   
+		   
+IO流的分类
+          流向：
+                  输入流   读取数据   FileReader   Reader
+                  输出流   写出数据   FileWriter   Writer
+ 
+          数据类型
+                  字节流
+                          字节输入流    读取数据   InputStream
+                          字节输出流    写出数据   OutputStream
+                  字符流
+                          字符输入流    读取数据   Reader
+                          字符输出流    写出数据   Writer
+						  
+	二进制文件只能使用字节流进行复制（使用windows自带的记事本打开乱码的）
+	文本文件的复制既可以使用字节流，也可以使用字符流					  
+						  

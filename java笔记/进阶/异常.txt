@@ -54,4 +54,14 @@ Throwable的常用方法
 
 finally:组合try...catch来使用，用于释放资源等收尾工作，无论try...catch是否执行，finally一定会执行		  
 		  
-		   
+异常的分类：
+    运行时期异常:RuntimeException的子类就是运行时期异常，在编译时期可以自由选择处理或者不处理
+    编译时期异常:Exception的子类，非RuntimeException的子类，在编译时期必须处理  
+	
+	throws:处理异常的异常的一种方式，把异常抛出，由调用者来处理
+    throw:制造异常的方式	
+	
+	注意:如果排除的是编译的时期异常,必须在方法声明处抛出(throws)
+ 
+   如何自定义一个异常类呢
+           写一个类去继承Exception或者RuntimeException,然后实现多个构造即可
