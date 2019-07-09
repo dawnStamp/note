@@ -166,3 +166,44 @@ IO流的分类
  
   注意:创建FileWriter对象时boolean参数是否追加，
       而创建打印流对象的boolean类型参数是是否自动刷新 
+	  
+
+对象操作流 可以用于读写任意类型的对象
+               ObjectOutputStream
+                       writeObject : 将一个对象写入流中
+                       ObjectOutputStream(OutputStream out)
+               ObjectInputStream
+                       readObject
+                       ObjectInputStream(InputStream in)
+ 
+  注意：
+       使用对象输出流写出对象，只能使用对象输入流来读取对象
+       只能将支持 java.io.Serializable 接口的对象写入流中
+ 
+ 
+  使用对象输出流和读对象输入流对象
+ 
+ 
+ 
+  Exception in thread "main" java.io.NotSerializableException: Serializable:序列号，是一个标识接口，只起标识作业，没有方法
+  当一个类的对象需要IO流进行读写的时候，这个类必须实现该接口	  
+ 
+  Exception in thread "main" java.io.EOFException :  当输入过程中意外到达文件或流的末尾是，抛出此异常
+ 
+  Exception in thread "main" java.io.InvalidClassException :
+       当Serialization 运行时检测到某个类具有以下问题之一时，抛出此异常
+           该类的序列版本号与从流中读取的类描述符的版本号不匹配
+           该类包含未知数据类型
+           该类没有访问的无参构造方法
+	  
+	  
+Properties : Properties类表示一组持久的属性,属性列表中的每个键及其对应的值都是一个字符串。
+ 
+  构造方法:
+           Properties() :创建一个没有默认值的空属性列表。	  
+	Properties和io流结合的功能:
+               void list(PrintStream out) :将此属性列表打印到指定的输出流。
+               void load(Reader reader) :以简单的线性格式从输入字符流读取属性列表（关键字和元素对）。
+               void store(Writer writer, String comments) :将此属性列表（键和元素对）写入此 Properties表中，
+			   以适合使用 load(Reader)方法的格式输出到输出字符流。	   
+		   
