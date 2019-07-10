@@ -206,4 +206,18 @@ Properties : Properties类表示一组持久的属性,属性列表中的每个�
                void load(Reader reader) :以简单的线性格式从输入字符流读取属性列表（关键字和元素对）。
                void store(Writer writer, String comments) :将此属性列表（键和元素对）写入此 Properties表中，
 			   以适合使用 load(Reader)方法的格式输出到输出字符流。	   
-		   
+编码表:把计算机底层的二进制转换成我没呢能看到的字符
+           ASCII
+ 
+           GB2312  --- GBK
+ 
+           Unicode 所有的字符都占两个字节
+           UTF-8 长度可变的码表
+ 
+  ANSI:本地编码表		   
+  java中的字符串默认使用ANSI(gbk)
+ 
+  乱码：编码保存前后一致即可解决
+
+字符流中的编码
+  字符流 = 字节流 + 编码
