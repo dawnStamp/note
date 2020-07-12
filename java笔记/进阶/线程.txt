@@ -29,4 +29,23 @@
  
    Thread(Runnable target)
    static Thread currentThread():返回当前线程对象
+   static void sleep(long millis) :让当前线程睡一会
    
+   
+   
+synchronized : 同步 （锁）,可以修饰代码块和方法，被修饰的代码块和方法一旦被某个线程访问，则直接锁住，其他的线程将无法访问
+ 
+   同步代码块：
+           synchronized(锁对象){
+ 
+           }
+ 
+  注意:锁对象需要被所有的线程所共享
+ 
+  同步:安全性高，效率差
+  非同步:效率高，但是安全性低
+  
+  同步方法：使用synchronized修饰的方法，一旦被一个线程访问，则整个方法全部锁住，其他线程则无法访问
+ 
+  注意:非静态同步方法的锁对象是this
+       静态的同步方法的锁对象是当前类的字节码对象
